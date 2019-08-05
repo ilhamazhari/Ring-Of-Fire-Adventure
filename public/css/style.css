@@ -1,0 +1,135 @@
+/** RoFA Official website stylesheet **/
+
+html, body {
+}
+
+section {
+	overflow: hidden;
+}
+
+.container-fluid {
+	margin: 0!important;
+	padding: 0!important;
+	background-color: #000;
+}
+
+.navbar-logo {
+	margin-left: 50px;
+	margin-right: 50px;
+}
+
+.nav-item a {
+	color: #fff;
+	padding: 5px 25px;
+	font-weight: 500;
+}
+
+.nav-item a:hover {
+	color: #ccc;
+	text-decoration: none;
+}
+
+.nav-left .nav-item a {
+	margin-left: 50px;
+}
+
+.nav-right .nav-item a {
+	margin-right: 50px;
+}
+
+.rofa-home {
+	display: flex;
+	height: calc(100vh - 160px);
+	align-items: center;
+}
+
+.rofa-home h1 {
+	font-family: "Bebas Neue Regular";
+	font-size: 50px;
+	color: #fff;
+}
+
+.rofa-home h3 {
+	font-family: "Avenir Medium";
+	font-size: 24px;
+	color: #ff6600;
+}
+
+.video-bg {
+	width: 100%;
+	z-index: 10;
+}
+
+.video-bg video {
+	width: 100%;
+	opacity: .6;
+}
+
+.home-title {
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	z-index: 11;
+}
+
+.rofa-about {
+	background-image: url('../images/about-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.rofa-about .row {
+	height: 100vh;
+}
+
+.about-title {
+	font-family: "Panton Black Italic Caps";
+	color: #fff;
+}
+
+.about-desc {
+	font-family: "Bebas Neue Regular";
+	color: #fff;
+	padding-right: 50px;
+}
+
+.btn-orange {
+	background-color: #ff6600!important;
+	color: #fff!important;
+	padding: 10px 30px!important;
+	border-radius: 0!important;
+	font-family: "Panton Black Italic Caps"
+}
+
+.btn-orange:hover {
+	background-color: #fff!important;
+	color: #ff6600!important;
+}
+
+.rofa-forum {
+	min-height: 15rem;
+	text-align: center;
+	background-image: url('../images/forum-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.rofa-forum h1 {
+	font-family: "Panton Black Italic Caps";
+	color: #fff;
+}
+
+.rofa-newsarticles {
+	height: 80vh;
+	background-color: #fff;
+}
+
+.rofa-discoverjourney {
+	height: 80vh;
+	background-image: url('../images/discover-journey-bg.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+}
