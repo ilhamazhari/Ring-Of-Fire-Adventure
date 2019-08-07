@@ -1,12 +1,14 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html>
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 		<title>Ring of Fire Adventure | @yield('title')</title>
 		<meta name="title" content="Ring of Fire Adventure Indonesia">
-		<meta name="description" content="">
+		<meta name="description" content="Explore Indonesia through our wonderful journey, we present Indonesia Nature, Culture and Heritage">
+
+		<link rel="shortcut icon" href="images/rofa-logo.jpg">
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<style type="text/css">
@@ -31,6 +33,11 @@
 				font-display: swap;
 			}
 			@font-face{
+				font-family: "Panton Light Caps";
+				src: url('fonts/PANTON-LIGHTCAPS.OTF');
+				font-display: swap;
+			}
+			@font-face{
 				font-family: "Panton Black Caps";
 				src: url('fonts/PANTON-BLACKCAPS.OTF');
 				font-display: swap;
@@ -44,6 +51,9 @@
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+		<!-- Fontawesome -->
+		<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 
 		@yield('style')
 	</head>
