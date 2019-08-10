@@ -50,6 +50,10 @@ section {
 	color: #fff;
 }
 
+.overlay-menu {
+	display: none;
+}
+
 .right-border-white {
 	border-right: 2px solid #fff;
 }
@@ -188,7 +192,6 @@ section {
 
 .news-thumbnails {
 	position: relative;
-	height: 200px;
 	transition: .2s;
 	-webkit-transition: .2s;
 }
@@ -199,7 +202,7 @@ section {
 
 .news-thumbnails img {
 	width: 100%;
-	position: absolute;
+	position: relative;
 	bottom: 0;
 	left: 0;
 }
@@ -351,11 +354,16 @@ section {
 		left: 40px
 	}
 
+	.close.navbar-toggler {
+		left: unset;
+		right: 0;
+	}
+
 	.overlay-menu {
 		display: none;
 		width: 100%;
 		min-height: 100%;
-		background-color: rgba(0,0,0,.7);
+		background-color: rgba(0,0,0,1);
 		position: absolute;
 		top: 0;
 		left: 0;
