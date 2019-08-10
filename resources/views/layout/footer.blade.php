@@ -22,15 +22,15 @@
 		</div>
 		<div class="col-md-6">
 			<div class="space-30"></div>
-			<h3>SPONSOR</h3>
+			<h3>SPONSORS</h3>
 			<div class="row">
+				<div class="col"></div>
 				<div class="col">
 					<img src="images/ktm.png" width="100%">
 				</div>
 				<div class="col">
 					<img src="images/nissan.png" width="100%">
 				</div>
-				<div class="col"></div>
 				<div class="col"></div>
 			</div>
 		</div>

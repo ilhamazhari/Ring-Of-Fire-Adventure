@@ -24,7 +24,7 @@
 <section class="rofa-about">
 	<div class="row">
 		<div class="col-md-6 d-flex flex-column align-items-center justify-content-center">
-			<img src="images/youk-rofa.jpg" style="height: 320px;">
+			<img src="images/youk-rofa.jpg">
 		</div>
 		<div class="col-md-6 d-flex flex-column justify-content-center">
 			<!-- -->
