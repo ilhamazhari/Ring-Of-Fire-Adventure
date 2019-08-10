@@ -400,10 +400,14 @@ section {
 		padding: 15px;
 	}
 
+	.rofa-about {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
 	.rofa-about img {
 		width: 90%;
 		height: auto;
-		margin-top: 40px;
 	}
 
 	.rofa-about a {
