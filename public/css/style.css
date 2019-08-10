@@ -398,6 +398,14 @@ section {
 		height: calc(100vh - 120px);
 	}
 
+	.rofa-home h1 {
+		font-size: 36px;
+	}
+
+	.rofa-home h3 {
+		font-size: 16px;
+	}
+
 	.video-bg video {
 		width: unset;
 		height: 100%;
