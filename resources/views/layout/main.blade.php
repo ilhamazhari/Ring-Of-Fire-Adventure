@@ -8,9 +8,9 @@
 		<meta name="title" content="Ring of Fire Adventure Indonesia">
 		<meta name="description" content="Explore Indonesia through our wonderful journey, we present Indonesia Nature, Culture and Heritage">
 
-		<link rel="shortcut icon" href="{{ url('/images') }}/rofa-logo.jpg">
+		<link rel="shortcut icon" href="images/rofa-logo.jpg">
 
-		<link rel="stylesheet" type="text/css" href="{{ url('/css') }}/style.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<style type="text/css">
 			@font-face{
 				font-family: "Avenir Medium";
