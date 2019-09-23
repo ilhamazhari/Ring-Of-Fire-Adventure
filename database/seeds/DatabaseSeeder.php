@@ -18,5 +18,12 @@ class DatabaseSeeder extends Seeder
         	'password' => bcrypt('adVenturestartedin2019'),
         	'credentials' => 'superadmin',
         ]);
+
+        DB::table('products')->insert([
+            ['name' => 'Underwear RoFA', 'category' => 'Apparel', 'price' => 10000],
+            ['name' => 'Jersey RoFA', 'category' => 'Apparel', 'price' => 20000],
+            ['name' => 'Gloves RoFA', 'category' => 'Apparel', 'price' => 10000],
+            ['name' => 'Balaclava RoFA', 'category' => 'Apparel', 'price' => 10000]
+        ]);
     }
 }

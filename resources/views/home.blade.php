@@ -35,57 +35,6 @@
 	</div>
 </section>
 
-<section class="rofa-forum d-flex flex-column justify-content-center">
-	<h1>RING OF FIRE ADVENTURE FORUM</h1>
-	<a href="#"><button class="btn btn-orange">JOIN NOW</button></a>
-</section>
-
-<section class="rofa-newsarticles">
-	<h1>NEWS & ARTICLES</h1>
-	<div class="row">
-		<div class="col-md-3 news">
-			<a href="#">
-				<div class="news-thumbnails">
-					<img src="images/news.jpg">
-					<div class="news-image-overlay"></div>
-					<h3>NEWS TITLE</h3>
-				</div>
-			</a>
-			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
-		</div>
-		<div class="col-md-3 news">
-			<a href="#">
-				<div class="news-thumbnails">
-					<img src="images/news.jpg">
-					<div class="news-image-overlay"></div>
-					<h3>NEWS TITLE</h3>
-				</div>
-			</a>
-			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
-		</div>
-		<div class="col-md-3 news">
-			<a href="#">
-				<div class="news-thumbnails">
-					<img src="images/news.jpg">
-					<div class="news-image-overlay"></div>
-					<h3>NEWS TITLE</h3>
-				</div>
-			</a>
-			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
-		</div>
-		<div class="col-md-3 news">
-			<a href="#">
-				<div class="news-thumbnails">
-					<img src="images/news.jpg">
-					<div class="news-image-overlay"></div>
-					<h3>NEWS TITLE</h3>
-				</div>
-			</a>
-			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
-		</div>
-	</div>
-</section>
-
 <section class="rofa-discoverjourney">
 	<h1>DISCOVER OUR JOURNEY</h1>
 	<div class="space-100"></div>
@@ -239,6 +188,59 @@
 		</div>
 	</div>
 </section>
+
+<section class="rofa-newsarticles">
+	<h1>NEWS & ARTICLES</h1>
+	<div class="row">
+		<div class="col-md-3 news">
+			<a href="#">
+				<div class="news-thumbnails">
+					<img src="images/news.jpg">
+					<div class="news-image-overlay"></div>
+					<h3>NEWS TITLE</h3>
+				</div>
+			</a>
+			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
+		</div>
+		<div class="col-md-3 news">
+			<a href="#">
+				<div class="news-thumbnails">
+					<img src="images/news.jpg">
+					<div class="news-image-overlay"></div>
+					<h3>NEWS TITLE</h3>
+				</div>
+			</a>
+			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
+		</div>
+		<div class="col-md-3 news">
+			<a href="#">
+				<div class="news-thumbnails">
+					<img src="images/news.jpg">
+					<div class="news-image-overlay"></div>
+					<h3>NEWS TITLE</h3>
+				</div>
+			</a>
+			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
+		</div>
+		<div class="col-md-3 news">
+			<a href="#">
+				<div class="news-thumbnails">
+					<img src="images/news.jpg">
+					<div class="news-image-overlay"></div>
+					<h3>NEWS TITLE</h3>
+				</div>
+			</a>
+			<p>Consectetur adipiscing elit. Nulla vel efficitur lectus. Maecenas ut urna tincidunt, elementum enim eu, imperdiet nunc.</p>
+		</div>
+	</div>
+</section>
+
+<section class="rofa-forum d-flex flex-column justify-content-center">
+	<h1>RING OF FIRE ADVENTURE MEMBERSHIP PROGRAM</h1>
+	<a href="#"><button class="btn btn-orange">SIGN UP NOW</button></a>
+</section>
+
+
 
 @include('layout.footer')
 

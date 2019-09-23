@@ -11,7 +11,6 @@ section {
 .container-fluid {
 	margin: 0!important;
 	padding: 0!important;
-	background-color: #000;
 }
 
 .mobile_hide {
@@ -20,6 +19,10 @@ section {
 
 .desktop_hide {
 	display: none!important;
+}
+
+.navbar {
+	background-color: #000;
 }
 
 .navbar-logo {
@@ -38,6 +41,10 @@ section {
 	text-decoration: none;
 }
 
+.nav-left {
+	padding-left: 126px !important;
+}
+
 .nav-left .nav-item a {
 	margin-left: 50px;
 }
@@ -52,6 +59,14 @@ section {
 
 .overlay-menu {
 	display: none;
+}
+
+.dropdown-toggle::after {
+	display: none !important;
+}
+
+.dropdown-menu a {
+	color: #000;
 }
 
 .right-border-white {
@@ -70,6 +85,7 @@ section {
 	display: flex;
 	height: calc(100vh - 160px);
 	align-items: center;
+	background-color: #000;
 }
 
 .rofa-home h1 {
@@ -161,27 +177,34 @@ section {
 	text-align: center;
 }
 
-.rofa-newsarticles h1 {
+.rofa-newsarticles h1, .latest-products h1 {
 	font-family: "Bebas Neue Bold";
 	font-size: 60px;
 	color: #000;
 	margin-top: 30px;
 }
 
-.rofa-newsarticles h1:before, .rofa-newsarticles h1:after {
+.rofa-newsarticles h1:before, .rofa-newsarticles h1:after, .store-heading:before, .store-heading:after {
 	content: "";
 	position: absolute;
-	width: 25%;
 	height: 5px;
 	background-color: #000;
 	margin-top: 30px;
 }
 
-.rofa-newsarticles h1:before {
+.rofa-newsarticles h1:before, .rofa-newsarticles h1:after {
+	width: 25%;
+}
+
+.store-heading:before, .store-heading:after {
+	width: 20rem;
+}
+
+.rofa-newsarticles h1:before, .store-heading:before {
 	right: 65%;
 }
 
-.rofa-newsarticles h1:after {
+.rofa-newsarticles h1:after, .store-heading:after {
 	left: 65%;
 }
 
@@ -329,6 +352,57 @@ section {
 	color: #fff;
 	opacity: .7;
 	text-decoration: none;
+}
+
+.container-store {
+	background-color: #fff;
+}
+
+@media screen and (max-width: 1600px) and (orientation: landscape) {
+
+	.nav-left .nav-item a {
+		margin-left: 25px;
+	}
+
+	.nav-right .nav-item a {
+		margin-right: 25px;
+	}
+
+	.nav-brand img {
+		width: 120px;
+		height: 120px;
+	}
+
+	.rofa-home {
+		height: calc(100vh - 128px);
+	}
+}
+
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+	.nav-left {
+		padding-left: 86px !important;
+	}
+
+	.nav-left .nav-item a {
+		margin-left: 0px;
+	}
+
+	.nav-right .nav-item a {
+		margin-right: 0px;
+	}
+
+	.nav-brand img {
+		width: 80px;
+		height: 80px;
+	}
+
+	.rofa-home {
+		height: calc(100vh - 88px) !important;
+	}
+
+	.nav-item a {
+		padding: 5px 15px;
+	}
 }
 
 @media screen and (max-width: 425px) and (orientation: portrait) {

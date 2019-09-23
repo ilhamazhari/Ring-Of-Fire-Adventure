@@ -4,6 +4,10 @@
 
 @section('style')
 <style type="text/css">
+	body {
+		background-color: #000;
+	}
+
 	.container {
 		height: 100vh;
 	}

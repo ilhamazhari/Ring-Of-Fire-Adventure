@@ -1,7 +1,7 @@
 <footer class="rofa-footer">
 	<div class="row">
 		<div class="col-md-3">
-			<img class="footer-logo" src="images/rofa-logo.jpg">
+			<img class="footer-logo" src="{{ URL::to('/') }}/images/rofa-logo.jpg">
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus tellus arcu, tempus quis mi ac, vehicula sodales leo. Sed faucibus nisl nec purus posuere elementum.</p>
 			<div class="footer-sosmed">
 				<i class="fa fa-facebook"></i><i class="fa fa-twitter"></i><i class="fa fa-instagram"></i>
@@ -26,10 +26,10 @@
 			<div class="row">
 				<div class="col"></div>
 				<div class="col">
-					<img src="images/ktm.png" width="100%">
+					<img src="{{ URL::to('/') }}/images/ktm.png" width="100%">
 				</div>
 				<div class="col">
-					<img src="images/nissan.png" width="100%">
+					<img src="{{ URL::to('/') }}/images/nissan.png" width="100%">
 				</div>
 				<div class="col"></div>
 			</div>
