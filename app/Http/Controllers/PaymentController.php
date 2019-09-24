@@ -29,8 +29,56 @@ class PaymentController extends Controller
             'gross_amount' => $request->gross_amount
         );
 
+        $item = [
+            array(
+                'id' => 'shipping1',
+                'name' => 'shipping_price',
+                'price' => $request->shipping_price,
+                'quantity' => 1
+            ),
+            array(
+                'id' => 'tax1',
+                'name' => 'tax_price',
+                'price' => $request->tax,
+                'quantity' => 1
+            )
+        ];
+
+        foreach($request->session()->get('cart') as $products)
+        {
+            $item[] = $products;
+        }
+
+        $transactionCode = Transaction::where('transaction_code', $request->order_id)->get();
+        $ca = json_decode($transactionCode->customer_address);
+        $bi = json_decode($transactionCode->billing_info);
+        $si = json_decode($transactionCode->shipping_info);
+
+        $customer_details = array(
+            'first_name' => $ca['first_name'],
+            'last_name' => $ca['last_name'],
+            'email' => $transactionCode->email,
+            'phone' => $ca['phone'],
+            'billing_address' => $bi,
+            'shipping_address' => $si
+
+        );
+
+        $credit_card['secure'] = true;
+
+        $time = time();
+        $custom_expiry = array(
+            'start_time' => date("Y-m-d H:i:s O",$time),
+            'unit'       => 'hour', 
+            'duration'   => 2
+        );
+
         $transaction_data = array(
-            'transaction_details' => $transaction_details
+            'transaction_details' => $transaction_details,
+            'item_details' => $item,
+            'customer_details' => $customer_details,
+            'credit_card' => $credit_card,
+            'expiry' => $custom_expiry
         );
 
         try{
@@ -60,7 +108,7 @@ class PaymentController extends Controller
             'courier' => 'required'
         ]);
 
-        $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'phone' => $request->phone, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
+        $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
 
         $billDetails = new Transaction;
 

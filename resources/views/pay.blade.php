@@ -32,6 +32,8 @@
 			</tr>
 			<form id="payment-form" method="POST">
 				@csrf
+				<input type="hidden" id="shipping_price" name="shipping_price" value="{{ $bill->shipping_price }}">
+				<input type="hidden" id="tax" name="tax" value="{{ $bill->tax }}">
 				<input type="hidden" id="gross_amount" name="gross_amount"  value="{{ $bill->total }}">
 				<input type="hidden" id="order_id" name="order_id" value="{{ $bill->transaction_code }}">
 				<input type="hidden" name="result_type" id="result-type" value=""></div>
