@@ -14,10 +14,10 @@ class PaymentController extends Controller
 
     public function __construct()
     {
-        Veritrans_Config::$serverKey = config('services.midtrans.serverKey');
-        Veritrans_Config::$isProduction = config('services.midtrans.isProduction');
-        Veritrans_Config::$isSanitized = config('services.midtrans.isSanitized');
-        Veritrans_Config::$is3ds = config('services.midtrans.is3ds');
+        Veritrans_Config::$serverKey = config('app.midtrans.server_key');
+        Veritrans_Config::$isProduction = config('app.midtrans.production');
+        Veritrans_Config::$isSanitized = config('app.midtrans.sanitized');
+        Veritrans_Config::$is3ds = config('app.midtrans.3ds');
     }
 
     public function checkout()
@@ -62,13 +62,13 @@ class PaymentController extends Controller
             array(
                 'id' => 'shipping1',
                 'name' => 'shipping_price',
-                'price' => $request->shipping_price,
+                'price' => (int)$request->shipping_price,
                 'quantity' => 1
             ),
             array(
                 'id' => 'tax1',
                 'name' => 'tax_price',
-                'price' => $request->tax,
+                'price' => (int)$request->tax,
                 'quantity' => 1
             )
         ];
@@ -78,10 +78,10 @@ class PaymentController extends Controller
             $item[] = $products;
         }
 
-        $transactionCode = Transaction::where('transaction_code', $orderId)->get();
-        $ca = json_decode($transactionCode->customer_address);
-        $bi = json_decode($transactionCode->billing_info);
-        $si = json_decode($transactionCode->shipping_info);
+        $transactionCode = Transaction::where('transaction_code', $orderId)->first();
+        $ca = json_decode($transactionCode->customer_address, true);
+        $bi = json_decode($transactionCode->billing_info, true);
+        $si = json_decode($transactionCode->shipping_info, true);
 
         $customer_details = array(
             'first_name' => $ca['first_name'],
@@ -93,14 +93,14 @@ class PaymentController extends Controller
 
         );
 
-        $credit_card['secure'] = true;
+        //$credit_card['secure'] = true;
 
-        $time = time();
-        $custom_expiry = array(
-            'start_time' => date("Y-m-d H:i:s O",$time),
-            'unit'       => 'hour', 
-            'duration'   => 2
-        );
+        //$time = time();
+        //$custom_expiry = array(
+        //    'start_time' => date("Y-m-d H:i:s O",$time),
+        //    'unit'       => 'hour', 
+        //    'duration'   => 2
+        //);
         
 
         $transaction_data = array(
