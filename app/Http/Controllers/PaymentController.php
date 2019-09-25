@@ -20,12 +20,32 @@ class PaymentController extends Controller
     	//
     }
 
+    public function status()
+    {
+        //
+    }
+
+    public function notifications()
+    {
+        $mt = new Midtrans;
+        echo 'test notification handler';
+        $json_result = file_get_contents('php://input');
+        $result = json_decode($json_result);
+
+        if($result){
+        $notif = $mt->status($result->order_id);
+        }
+
+        error_log(print_r($result,TRUE));
+    }
+
     public function snapToken(Request $request)
     {
         $midtrans = new Midtrans;
 
+        $orderId = utf8_decode(urldecode($request->order_id));
         $transaction_details = array(
-            'order_id' => $request->order_id,
+            'order_id' => $orderId,
             'gross_amount' => $request->gross_amount
         );
 
@@ -49,7 +69,7 @@ class PaymentController extends Controller
             $item[] = $products;
         }
 
-        $transactionCode = Transaction::where('transaction_code', $request->order_id)->get();
+        $transactionCode = Transaction::where('transaction_code', $orderId)->get();
         $ca = json_decode($transactionCode->customer_address);
         $bi = json_decode($transactionCode->billing_info);
         $si = json_decode($transactionCode->shipping_info);
@@ -72,11 +92,12 @@ class PaymentController extends Controller
             'unit'       => 'hour', 
             'duration'   => 2
         );
+        
 
         $transaction_data = array(
             'transaction_details' => $transaction_details,
-            'item_details' => $item,
-            'customer_details' => $customer_details,
+            //'item_details' => $item,
+            //'customer_details' => $customer_details,
             'credit_card' => $credit_card,
             'expiry' => $custom_expiry
         );

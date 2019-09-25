@@ -58,8 +58,8 @@
 			$(this).attr("disabled", "disabled");
 
 			$.ajax({
-				type: 'POST',
-				url: './snaptoken',
+				type: 'GET',
+				url: '{{ URL::to('/') }}/snaptoken',
 				data: {gross_amount: $('#gross_amount').val(), order_id: $('#order_id').val()},
 
 				success: function(data){
