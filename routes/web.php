@@ -42,8 +42,8 @@ Route::group(['prefix' => 'payment'], function(){
 });
 
 // SNAP Midtrans Payment Gateway
-Route::get('/snaptoken', 'PaymentController@snapToken');
-//Route::post('/snaptoken', 'PaymentController@snapToken');
+//Route::get('/snaptoken', 'PaymentController@snapToken');
+Route::post('/snaptoken', 'PaymentController@snapToken');
 Route::post('/snapfinish', 'PaymentController@snapFinish');
 
 // RoFA Login and Signup

@@ -54,11 +54,12 @@
 <script type="text/javascript">
 	$(document).ready(function(){
 		$('#pay-button').click(function(event){
-			event.preventDefault();
-			$(this).attr("disabled", "disabled");
+			//event.preventDefault();
+			//$(this).attr("disabled", "disabled");
 
-			$.ajax({
-				type: 'GET',
+			$.post({
+				_method: 'POST',
+            	_token: '{{ csrf_token() }}',
 				url: '{{ URL::to('/') }}/snaptoken',
 				data: {gross_amount: $('#gross_amount').val(), order_id: $('#order_id').val()},
 

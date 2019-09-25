@@ -232,7 +232,9 @@ return [
         'merchant_id' => env('MIDTRANS_MERCHANT_ID'),
         'client_key' => env('MIDTRANS_CLIENT_KEY'),
         'server_key' => env('MIDTRANS_SERVER_KEY'),
-        'production' => env('MIDTRANS_PRODUCTION'),
+        'production' => env('MIDTRANS_PRODUCTION', false),
+        'sanitized' => env('MIDTRANS_SANITIZED', true),
+        '3ds' => env('MIDTRANS_3DS', true),
     ],
 
 ];

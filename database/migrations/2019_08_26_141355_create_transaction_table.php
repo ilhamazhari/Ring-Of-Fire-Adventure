@@ -26,6 +26,8 @@ class CreateTransactionTable extends Migration
             $table->integer('tax');
             $table->integer('shipping_price');
             $table->integer('total');
+            $table->string('status')->default('pending');
+            $table->string('snap_token')->nullable();
             $table->timestamps();
         });
     }

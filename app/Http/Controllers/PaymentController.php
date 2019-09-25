@@ -5,10 +5,20 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Transaction;
 
-use App\Veritrans\Midtrans;
+use Veritrans_Config;
+use Veritrans_Snap;
+use Veritrans_Notification;
 
 class PaymentController extends Controller
 {
+
+    public function __construct()
+    {
+        Veritrans_Config::$serverKey = config('services.midtrans.serverKey');
+        Veritrans_Config::$isProduction = config('services.midtrans.isProduction');
+        Veritrans_Config::$isSanitized = config('services.midtrans.isSanitized');
+        Veritrans_Config::$is3ds = config('services.midtrans.is3ds');
+    }
 
     public function checkout()
     {
@@ -27,7 +37,7 @@ class PaymentController extends Controller
 
     public function notifications()
     {
-        $mt = new Midtrans;
+        $mt = new Veritrans;
         echo 'test notification handler';
         $json_result = file_get_contents('php://input');
         $result = json_decode($json_result);
@@ -41,9 +51,8 @@ class PaymentController extends Controller
 
     public function snapToken(Request $request)
     {
-        $midtrans = new Midtrans;
-
-        $orderId = utf8_decode(urldecode($request->order_id));
+        //$orderId = utf8_decode(urldecode($request->order_id));
+        $orderId = $request->order_id;
         $transaction_details = array(
             'order_id' => $orderId,
             'gross_amount' => $request->gross_amount
@@ -96,18 +105,20 @@ class PaymentController extends Controller
 
         $transaction_data = array(
             'transaction_details' => $transaction_details,
-            //'item_details' => $item,
-            //'customer_details' => $customer_details,
-            'credit_card' => $credit_card,
-            'expiry' => $custom_expiry
+            'item_details' => $item,
+            'customer_details' => $customer_details,
+            //'credit_card' => $credit_card,
+            //'expiry' => $custom_expiry
         );
 
-        try{
-            $snap_token = $midtrans->getSnapToken($transaction_data);
-            echo $snap_token;
-        }catch(Exception $e){
-            return $e->getMessage;
-        }
+        $snap_token = Veritrans_Snap::getSnapToken($transaction_data);
+
+        //$transactionCode->snap_token = $snap_token;
+        //$transactionCode->save();
+
+        $this->response['snap_token'] = $snap_token;
+
+        return response()->json($this->response);
     }
 
     public function snapFinish(Request $request)
@@ -154,4 +165,6 @@ class PaymentController extends Controller
 
         return view('pay', ['billing' => $billing]);
     }
+
+
 }
