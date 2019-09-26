@@ -22,6 +22,7 @@
 			</tr>
 		</thead>
 		<tbody>
+			<form id="payment-form">
 			@foreach($billing as $bill)
 			<tr>
 				<td scope="row"></td>
@@ -30,7 +31,6 @@
 				<td>{{ $bill->tax }}</td>
 				<td>{{ $bill->total }}</td>
 			</tr>
-			<form id="payment-form" method="POST">
 				@csrf
 				<input type="hidden" id="shipping_price" name="shipping_price" value="{{ $bill->shipping_price }}">
 				<input type="hidden" id="tax" name="tax" value="{{ $bill->tax }}">
@@ -38,11 +38,11 @@
 				<input type="hidden" id="order_id" name="order_id" value="{{ $bill->transaction_code }}">
 				<input type="hidden" name="result_type" id="result-type" value=""></div>
 				<input type="hidden" name="result_data" id="result-data" value=""></div>
-			</form>
 			@endforeach
+			</form>
 		</tbody>
 	</table>
-	<button class="btn btn-primary" id="pay-button">Pay Now!</button>
+	<button type="submit" class="btn btn-primary" id="pay-button">Pay Now!</button>
 </div>
 
 @include('layout.footer')
@@ -53,52 +53,31 @@
 @section('script')
 <script type="text/javascript">
 	$(document).ready(function(){
+		
 		$('#pay-button').click(function(event){
 			//event.preventDefault();
 			//$(this).attr("disabled", "disabled");
 
-			$.post({
-				_method: 'POST',
-            	_token: '{{ csrf_token() }}',
-				url: '{{ URL::to('/') }}/snaptoken',
-				data: {gross_amount: $('#gross_amount').val(), order_id: $('#order_id').val()},
-
-				success: function(data){
-					console.log('token= '+data);
-					var resultType = document.getElementById('result-type');
-					var resultData = document.getElementById('result-data');
-
-					function changeResult(type,data){
-						$("#result-type").val(type);
-						$("#result-data").val(JSON.stringify(data));
-						//resultType.innerHTML = type;
-						//resultData.innerHTML = JSON.stringify(data);
+			$.post('{{ route('snaptoken') }}', {
+				_method: "POST",
+				_token: "{{ csrf_token() }}",
+				order_id: $('#order_id').val(),
+				gross_amount: $('#gross_amount').val(),
+				shipping_price: $('#shipping_price').val(),
+				tax: $('#tax').val(),
+			},
+			function(data,status){
+				snap.pay(data.snap_token, {
+					onSuccess: function(result){
+						console.log(result);
+					},
+					onPending: function(result){
+						console.log(result);
+					},
+					onError: function(result){
+						console.log(result);
 					}
-
-					snap.pay(data,{
-						onSuccess: function(result){
-							changeResult('success', result);
-							console.log(result.status_message);
-							console.log(result);
-							$('#payment-form').submit();
-						},
-						onPending: function(result){
-							changeResult('pending', result);
-							console.log(result.status_message);
-							$('#payment-form').submit();
-						},
-						onError: function(result){
-							changeResult('error', result);
-							console.log(result.status_message);
-							$('#payment-form').submit();
-						},
-
-					});
-				},
-
-				error: function(result){
-					console.log(result);
-				},
+				});
 			});
 		});
 	});

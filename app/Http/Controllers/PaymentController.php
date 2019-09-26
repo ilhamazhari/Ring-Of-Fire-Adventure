@@ -30,23 +30,41 @@ class PaymentController extends Controller
     	//
     }
 
-    public function status()
+    public function finish()
     {
         //
     }
 
-    public function notifications()
+    public function notifications(Request $request)
     {
-        $mt = new Veritrans;
-        echo 'test notification handler';
-        $json_result = file_get_contents('php://input');
-        $result = json_decode($json_result);
+        $notification = new Veritrans_Notification();
 
-        if($result){
-        $notif = $mt->status($result->order_id);
+        $status = $notification->transaction_status;
+        $type = $notification->payment_type;
+        $orderId = $notification->order_id;
+        $fraud = $notification->fraud_status;
+
+        $transaction = Transaction::findOrFail($orderId);
+
+        if($status == 'capture'){
+            if($type == 'credit_card'){
+                if($fraud == 'challange'){
+                    $transaction->setPending();
+                }else{
+                    $transaction->setSuccess();
+                }
+            }
+        } else if($status == 'settlement' || $status == 'success'){
+            $transaction->setSuccess();
+        }else if($status == 'pending'){
+            $transaction->setPending();
+        }else if($status == 'deny'){
+            $transaction->setFailed();
+        }else if($status == 'expire'){
+            $transaction->setExpired();
+        }else if($status == 'cancel'){
+            $transaction->setFailed();
         }
-
-        error_log(print_r($result,TRUE));
     }
 
     public function snapToken(Request $request)
@@ -61,14 +79,14 @@ class PaymentController extends Controller
         $item = [
             array(
                 'id' => 'shipping1',
-                'name' => 'shipping_price',
-                'price' => (int)$request->shipping_price,
+                'name' => 'Shipping Cost',
+                'price' => $request->shipping_price,
                 'quantity' => 1
             ),
             array(
                 'id' => 'tax1',
-                'name' => 'tax_price',
-                'price' => (int)$request->tax,
+                'name' => 'Tax',
+                'price' => $request->tax,
                 'quantity' => 1
             )
         ];
@@ -113,21 +131,12 @@ class PaymentController extends Controller
 
         $snap_token = Veritrans_Snap::getSnapToken($transaction_data);
 
-        //$transactionCode->snap_token = $snap_token;
-        //$transactionCode->save();
+        $transactionCode->snap_token = $snap_token;
+        $transactionCode->save();
 
         $this->response['snap_token'] = $snap_token;
 
         return response()->json($this->response);
-    }
-
-    public function snapFinish(Request $request)
-    {
-        $result = json_decode($request->result_data);
-        echo $result->status_message.'<br>';
-        echo 'RESULT <br><pre>';
-        var_dump($result);
-        echo '</pre>';
     }
 
     public function storeBillDetails(Request $request)

@@ -37,14 +37,10 @@ Route::group(['prefix' => 'trip'], function(){
 // Payment gateway route
 Route::group(['prefix' => 'payment'], function(){
 	Route::get('/', 'PaymentController@index')->name('payment');
-	Route::get('/status', 'PaymentController@status')->name('payment.status');
+	Route::post('/snaptoken', 'PaymentController@snapToken')->name('snaptoken');
+	Route::get('/finish', 'PaymentController@status')->name('payment.status');
 	Route::get('/notifications', 'PaymentController@notifications')->name('payment.notifications');
 });
-
-// SNAP Midtrans Payment Gateway
-//Route::get('/snaptoken', 'PaymentController@snapToken');
-Route::post('/snaptoken', 'PaymentController@snapToken');
-Route::post('/snapfinish', 'PaymentController@snapFinish');
 
 // RoFA Login and Signup
 Route::get('login', function() { return view('login'); })->name('login');
