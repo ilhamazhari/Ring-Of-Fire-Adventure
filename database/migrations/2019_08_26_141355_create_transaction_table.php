@@ -21,10 +21,10 @@ class CreateTransactionTable extends Migration
             $table->string('email');
             $table->text('customer_address');
             $table->text('billing_info');
-            $table->text('shipping_info');
+            $table->text('shipping_info')->nullable();
             $table->integer('subtotal');
             $table->integer('tax');
-            $table->integer('shipping_price');
+            $table->integer('shipping_price')->nullable();
             $table->integer('total');
             $table->string('status')->default('pending');
             $table->string('snap_token')->nullable();

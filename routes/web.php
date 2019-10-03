@@ -22,12 +22,14 @@ Route::group(['prefix' => 'store'], function(){
 	Route::get('add-to-cart/{products}', 'StoreController@addToCart')->name('add-to-cart');
 	Route::get('update-cart', 'StoreController@updateCart')->name('update-cart');
 	Route::get('remove-cart', 'StoreController@removeCart')->name('remove-cart');
-	Route::get('checkout', function(){ return view('checkout'); })->name('store-checkout');
-	Route::post('checkout', 'PaymentController@storeBillDetails')->name('store-checkout-bill');
+	Route::get('checkout', function(){ return view('storecheckout'); })->name('store-checkout');
+	Route::post('checkout', 'StoreController@storeCheckout')->name('store-checkout-bill');
 });
 
 Route::group(['prefix' => 'events'], function(){
-	Route::get('checkout', 'PaymentController@checkout')->name('event-checkout');
+	Route::get('/', 'BookEventsController@index')->name('events');
+	Route::get('/{events}', 'BookEventsController@eventDetails')->name('event-details');
+  Route::post('/booking/{events}', 'BookEventsController@eventBooking')->name('event-booking');
 });
 
 Route::group(['prefix' => 'trip'], function(){
@@ -40,6 +42,7 @@ Route::group(['prefix' => 'payment'], function(){
 	Route::post('/snaptoken', 'PaymentController@snapToken')->name('snaptoken');
 	Route::get('/finish', 'PaymentController@status')->name('payment.status');
 	Route::get('/notifications', 'PaymentController@notifications')->name('payment.notifications');
+  Route::get('/tes', 'PaymentController@tes');
 });
 
 // RoFA Login and Signup
@@ -55,4 +58,5 @@ Route::group(['prefix' => 'webmanager', 'middleware' => 'auth'], function(){
 	Route::get('content', function(){ return view('webmanager.content'); })->name('manager.content');
 	Route::resource('products', 'ProductsController', ['as' => 'manager']);
 	Route::resource('products/image', 'ProductImageController', ['as' => 'manager.products']);
+	Route::resource('events', 'EventsController', ['as' => 'manager']);
 });

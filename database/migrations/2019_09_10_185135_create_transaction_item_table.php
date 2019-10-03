@@ -17,8 +17,9 @@ class CreateTransactionItemTable extends Migration
             $table->bigIncrements('id');
             $table->integer('transaction_id');
             $table->string('type');
-            $table->integer('products_id');
-            $table->integer('events_id');
+            $table->integer('quantity');
+            $table->integer('products_id')->nullable();
+            $table->integer('events_id')->nullable();
             $table->timestamps();
         });
     }

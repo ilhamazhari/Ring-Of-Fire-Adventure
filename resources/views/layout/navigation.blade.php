@@ -13,7 +13,7 @@
 	</div>
 
 	<ul class=" mobile_hide nav navbar-nav nav-right">
-		<li class="nav-item"><a href="#">EVENTS</a></li>
+		<li class="nav-item"><a href="{{ URL::Route('events') }}">EVENTS</a></li>
 		<li class="nav-item"><a href="{{ URL::Route('store') }}">STORE</a></li>
 		<li class="nav-item"><a href="#">TRIP</a></li>
 	</ul>

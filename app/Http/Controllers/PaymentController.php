@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Transaction;
+use App\TransactionItem;
+use App\Products;
+use App\Events;
 
 use Veritrans_Config;
 use Veritrans_Snap;
@@ -67,6 +70,11 @@ class PaymentController extends Controller
         }
     }
 
+    public function eventSnapToken(Request $request)
+    {
+      //
+    }
+
     public function snapToken(Request $request)
     {
         //$orderId = utf8_decode(urldecode($request->order_id));
@@ -91,9 +99,18 @@ class PaymentController extends Controller
             )
         ];
 
-        foreach($request->session()->get('cart') as $products)
+        $transaction = Transaction::where('transaction_code', $orderId)->first();
+        $transactionItem = TransactionItem::where('transaction_id', $transaction->id)->get();
+
+        foreach($transactionItem as $ti)
         {
-            $item[] = $products;
+          if($ti->type == 'Store Transaction'){
+            $products = Products::where('id', $ti->products_id)->first();
+            $item[] = array('id' => $products->id, 'name' => $products->name, 'price' => $products->price, 'quantity' => $ti->quantity);
+          }else if($ti->type == 'Event Booking'){
+            $events = Events::where('id', $ti->events_id)->first();
+            $item[] = array('id' => $events->id, 'name' => $events->name, 'price' => $events->price, 'quantity' => $ti->quantity);
+          }
         }
 
         $transactionCode = Transaction::where('transaction_code', $orderId)->first();
@@ -139,41 +156,38 @@ class PaymentController extends Controller
         return response()->json($this->response);
     }
 
-    public function storeBillDetails(Request $request)
+    public function tes()
     {
-        $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'courier' => 'required'
-        ]);
+      $orderId = 'ROFA/2019/10/03/20';
+      $item = [
+            array(
+                'id' => 'shipping1',
+                'name' => 'Shipping Cost',
+                'price' => 10000,
+                'quantity' => 1
+            ),
+            array(
+                'id' => 'tax1',
+                'name' => 'Tax',
+                'price' => 4000,
+                'quantity' => 1
+            )
+        ];
 
-        $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
+        $transaction = Transaction::where('transaction_code', $orderId)->first();
+        $transactionItem = TransactionItem::where('transaction_id', $transaction->id)->get();
 
-        $billDetails = new Transaction;
+        foreach($transactionItem as $ti)
+        {
+          if($ti->type == 'Store Transaction'){
+            $products = Products::where('id', $ti->products_id)->first();
+            $item[] = array('id' => $products->id, 'name' => $products->name, 'price' => $products->price, 'quantity' => $ti->quantity);
+          }else if($ti->type == 'Event Booking'){
+            $events = Events::where('id', $ti->events_id)->first();
+            $item[] = array('id' => $events->id, 'name' => $events->name, 'price' => $events->price, 'quantity' => $ti->quantity);
+          }
+        }
 
-        $transaction_id = Transaction::count();
-        $transaction_id += 1;
-        $transactioncode = "ROFA/".date("Y/m/d")."/".$transaction_id;
-
-        $billDetails->transaction_code = $transactioncode;
-        $billDetails->first_name = $request->first_name;
-        $billDetails->last_name = $request->last_name;
-        $billDetails->email = $request->email;
-        $billDetails->customer_address = json_encode($shipping_info);
-        $billDetails->billing_info = json_encode($shipping_info);
-        $billDetails->shipping_info = json_encode($shipping_info);
-        $billDetails->subtotal = $request->subtotal;
-        $billDetails->tax = $request->tax;
-        $billDetails->shipping_price = $request->shipping_price;
-        $billDetails->total = $request->total;
-        $billDetails->save();
-
-        $billing = Transaction::where('transaction_code', $transactioncode)->get();
-
-        return view('pay', ['billing' => $billing]);
+      return response()->json($item);
     }
-
-
 }

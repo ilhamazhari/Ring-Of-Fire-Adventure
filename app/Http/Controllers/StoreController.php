@@ -74,4 +74,49 @@ class StoreController extends Controller
 	{
 		//
 	}
+
+  public function storeCheckout(Request $request)
+    {
+        $request->validate([
+            'first_name' => 'required',
+            'last_name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'courier' => 'required'
+        ]);
+
+        $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country_code, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
+
+        $billDetails = new Transaction;
+
+        $transaction_id = Transaction::count();
+        $transaction_id += 1;
+        $transactioncode = "ROFA/".date("Y/m/d")."/".$transaction_id;
+
+        $billDetails->transaction_code = $transactioncode;
+        $billDetails->first_name = $request->first_name;
+        $billDetails->last_name = $request->last_name;
+        $billDetails->email = $request->email;
+        $billDetails->customer_address = json_encode($shipping_info);
+        $billDetails->billing_info = json_encode($shipping_info);
+        $billDetails->shipping_info = json_encode($shipping_info);
+        $billDetails->subtotal = $request->subtotal;
+        $billDetails->tax = $request->tax;
+        $billDetails->shipping_price = $request->shipping_price;
+        $billDetails->total = $request->total;
+        $billDetails->save();
+
+        $transactionItem = new TransactionItem;
+        foreach($request->session()->get('cart') as $ca => $cart){
+          $transactionItem->transaction_id = $billDetails->id;
+          $transactionItem->type = 'Store Transaction';
+          $transactionItem->quantity = $cart['quantity'];
+          $transactionItem->products_id = $cart['id'];
+          $transactionItem->save();
+        }
+
+        $billing = Transaction::where('transaction_code', $transactioncode)->get();
+
+        return view('pay', ['billing' => $billing]);
+    }
 }
