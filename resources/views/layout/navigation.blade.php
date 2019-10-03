@@ -55,8 +55,8 @@
 		<ul class="nav navbar-nav">
 			<li class="nav-item"><a href="{{ URL::Route('home') }}" class="nav-link">HOME</a></li>
 			<li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">STORE</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">EVENTS</a></li>
+			<li class="nav-item"><a href="{{ URL::Route('store') }}" class="nav-link">STORE</a></li>
+			<li class="nav-item"><a href="{{ URL::Route('events') }}" class="nav-link">EVENTS</a></li>
 			<li class="nav-item"><a href="#" class="nav-link">ARTICLES</a></li>
 			<li class="nav-item"><a href="#" class="nav-link">TRIP</a></li>
 			<li class="nav-item"><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
