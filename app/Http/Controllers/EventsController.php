@@ -38,9 +38,10 @@ class EventsController extends Controller
 
     		$currentTime = date('Ymd');
   			$name = $image->getClientOriginalName();
-  			$newName = $currentTime . $name;
+  			$newName = $currentTime . '-' . $name;
+        $path = public_path('/images/events/');
 
-  			$image->move(public_path() . '/images/events/', $newName);
+  			$image->move($path, $newName);
 
   			$events = new Events;
 
@@ -81,9 +82,10 @@ class EventsController extends Controller
       if($request->hasFile('image')){
         $image = $request->image;
 
-        $name = date('Ymd') . $image->getClientOriginalName();
+        $name = date('Ymd') . '-' . $image->getClientOriginalName();
+        $path = public_path('/images/events/');
 
-        $image->move(public_path() . '/images/events/', $name);
+        $image->move($path, $name);
 
         $events->image = $name;
       }
