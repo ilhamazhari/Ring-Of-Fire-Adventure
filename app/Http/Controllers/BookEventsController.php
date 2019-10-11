@@ -63,7 +63,6 @@ class BookEventsController extends Controller
       $transactionItem = new TransactionItem;
 
       $transactionItem->transaction_id = $transaction->id;
-      $transactionItem->type = 'Event Booking';
       $transactionItem->quantity = $request->quantity;
       $transactionItem->events_id = $request->events_id;
       $transactionItem->save();

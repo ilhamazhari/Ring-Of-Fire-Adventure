@@ -111,7 +111,6 @@ class StoreController extends Controller
         $transactionItem = new TransactionItem;
         foreach($request->session()->get('cart') as $ca => $cart){
           $transactionItem->transaction_id = $billDetails->id;
-          $transactionItem->type = 'Store Transaction';
           $transactionItem->quantity = $cart['quantity'];
           $transactionItem->products_id = $cart['id'];
           $transactionItem->save();
