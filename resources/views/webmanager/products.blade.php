@@ -28,6 +28,7 @@
 			<th>Name</th>
 			<th>Category</th>
 			<th>Price</th>
+      <th>Weight</th>
 			<th>Discount</th>
 			<th>Tags</th>
 			<th>Action</th>
@@ -44,11 +45,12 @@
 			<td>{{ $prd->name }}</td>
 			<td>{{ $prd->category }}</td>
 			<td>{{ $prd->price }}</td>
+      <td>{{ $prd->weight }}</td>
 			<td>{{ $prd->discount }}</td>
 			<td>{{ $prd->tags }}</td>
 			<td>
 				<form method="POST" action="{{ route('manager.products.destroy', $prd->id) }}">
-					<a href="#" class="edit-button btn btn-info" data-toggle="modal" data-target="#editProductsModal" data-id="{{ $prd->id }}" data-name="{{ $prd->name }}" data-category="{{ $prd->category }}" data-description="{{ $prd->description }}" data-price="{{ $prd->price }}" data-discount="{{ $prd->discount }}" data-tags="{{ $prd->tags }}"><i class="fa fa-search fa-fw"></i> Details</a>
+					<a href="#" class="edit-button btn btn-info" data-toggle="modal" data-target="#editProductsModal" data-id="{{ $prd->id }}" data-name="{{ $prd->name }}" data-category="{{ $prd->category }}" data-description="{{ $prd->description }}" data-price="{{ $prd->price }}" data-weight="{{ $prd->weight }}" data-discount="{{ $prd->discount }}" data-tags="{{ $prd->tags }}"><i class="fa fa-search fa-fw"></i> Details</a>
 					@csrf
 					@method('DELETE')
 					<button type="submit" class="btn btn-danger"><i class="fa fa-trash-o fa-fw"></i> Delete</button>
@@ -67,7 +69,7 @@
 <button type="button" class="btn btn-primary" id="addProductsButton" data-toggle="modal" data-target="#productsModal"><i class="fa fa-plus fa-fw"></i> Add products</button>
 
 <div class="modal fade" id="productsModal" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content">
 			<form name="addproducts" method="POST" action="{{ URL::Route('manager.products.store') }}">
 				@csrf
@@ -92,11 +94,17 @@
 						</div>
 						<div class="form-group">
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col input-group mb-3">
+                  <div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
 									<input type="text" name="price" class="form-control" id="addPrice" placeholder="Price">
 								</div>
-								<div class="col">
+                <div class="col input-group mb-3">
+                  <input type="text" name="weight" class="form-control" id="addWeight" placeholder="Weight">
+                  <div class="input-group-append"><span class="input-group-text">gr</span></div>
+                </div>
+								<div class="col input-group mb-3">
 									<input type="text" name="discount" class="form-control" id="addDiscount" placeholder="Discount">
+                  <div class="input-group-append"><span class="input-group-text">%</span></div>
 								</div>
 							</div>
 						
@@ -118,7 +126,7 @@
 </div>
 
 <div class="modal fade" id="editProductsModal" tabindex="-1" role="dialog" aria-hidden="true">
-	<div class="modal-dialog modal-dialog-centered" role="document">
+	<div class="modal-dialog modal-dialog-centered modal-lg" role="document">
 		<div class="modal-content">
 			<form name="editproducts" method="POST" action="">
 				@csrf
@@ -144,11 +152,17 @@
 						</div>
 						<div class="form-group">
 							<div class="row">
-								<div class="col-md-8">
+								<div class="col input-group mb-3">
+                  <div class="input-group-prepend"><span class="input-group-text">Rp</span></div>
 									<input type="text" name="price" class="form-control" id="editPrice" placeholder="Price">
 								</div>
-								<div class="col">
+                <div class="col input-group mb-3">
+                  <input type="text" name="weight" class="form-control" id="editWeight" placeholder="Weight">
+                  <div class="input-group-append"><span class="input-group-text">gr</span></div>
+                </div>
+								<div class="col input-group mb-3">
 									<input type="text" name="discount" class="form-control" id="editDiscount" placeholder="Discount">
+                  <div class="input-group-append"><span class="input-group-text">%</span></div>
 								</div>
 							</div>
 						
@@ -180,6 +194,7 @@ $('.edit-button').click(function(){
 	$('#editCategory').val($(this).data('category'));
 	$('#editDescription').val($(this).data('description'));
 	$('#editPrice').val($(this).data('price'));
+  $('#editWeight').val($(this).data('weight'));
 	$('#editDiscount').val($(this).data('discount'));
 	$('#editTags').val($(this).data('tags'));
 });

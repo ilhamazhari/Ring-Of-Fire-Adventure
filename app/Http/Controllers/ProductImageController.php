@@ -36,9 +36,9 @@ class ProductImageController extends Controller
   	if($request->hasfile('filename')){
   		$image = $request->file('filename');
 
-  		$currentTime = date('YmdHis');
+  		$currentDate = date('Ymd');
   		$name = $image->getClientOriginalName();
-  		$newName = $currentTime . $name;
+  		$newName = $currentDate . $name;
 
   		$image->move(public_path() . '/images/products/', $newName);
 

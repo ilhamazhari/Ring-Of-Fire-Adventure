@@ -23,22 +23,12 @@ class PaymentController extends Controller
         Veritrans_Config::$is3ds = config('app.midtrans.3ds');
     }
 
-    public function checkout()
+    public function status(Request $request)
     {
-    	return view('checkout');
+      
     }
 
-    public function payment()
-    {
-    	//
-    }
-
-    public function finish()
-    {
-        //
-    }
-
-    public function notifications(Request $request)
+    public function notifications()
     {
         $notification = new Veritrans_Notification();
 
@@ -68,11 +58,6 @@ class PaymentController extends Controller
         }else if($status == 'cancel'){
             $transaction->setFailed();
         }
-    }
-
-    public function eventSnapToken(Request $request)
-    {
-      //
     }
 
     public function snapToken(Request $request)
@@ -154,40 +139,5 @@ class PaymentController extends Controller
         $this->response['snap_token'] = $snap_token;
 
         return response()->json($this->response);
-    }
-
-    public function tes()
-    {
-      $orderId = 'ROFA/2019/10/03/20';
-      $item = [
-            array(
-                'id' => 'shipping1',
-                'name' => 'Shipping Cost',
-                'price' => 10000,
-                'quantity' => 1
-            ),
-            array(
-                'id' => 'tax1',
-                'name' => 'Tax',
-                'price' => 4000,
-                'quantity' => 1
-            )
-        ];
-
-        $transaction = Transaction::where('transaction_code', $orderId)->first();
-        $transactionItem = TransactionItem::where('transaction_id', $transaction->id)->get();
-
-        foreach($transactionItem as $ti)
-        {
-          if($ti->type == 'Store Transaction'){
-            $products = Products::where('id', $ti->products_id)->first();
-            $item[] = array('id' => $products->id, 'name' => $products->name, 'price' => $products->price, 'quantity' => $ti->quantity);
-          }else if($ti->type == 'Event Booking'){
-            $events = Events::where('id', $ti->events_id)->first();
-            $item[] = array('id' => $events->id, 'name' => $events->name, 'price' => $events->price, 'quantity' => $ti->quantity);
-          }
-        }
-
-      return response()->json($item);
     }
 }

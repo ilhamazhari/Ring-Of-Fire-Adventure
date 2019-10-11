@@ -42,7 +42,6 @@ Route::group(['prefix' => 'payment'], function(){
 	Route::post('/snaptoken', 'PaymentController@snapToken')->name('snaptoken');
 	Route::get('/finish', 'PaymentController@status')->name('payment.status');
 	Route::get('/notifications', 'PaymentController@notifications')->name('payment.notifications');
-  Route::get('/tes', 'PaymentController@tes');
 });
 
 // RoFA Login and Signup
@@ -55,7 +54,7 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 // RoFA Web Manager
 Route::group(['prefix' => 'webmanager', 'middleware' => 'auth'], function(){
 	Route::get('/', function(){ return view('webmanager.dashboard'); })->name('manager.dashboard');
-	Route::get('content', function(){ return view('webmanager.content'); })->name('manager.content');
+  Route::resource('content', 'ContentController', ['as' => 'manager']);
 	Route::resource('products', 'ProductsController', ['as' => 'manager']);
 	Route::resource('products/image', 'ProductImageController', ['as' => 'manager.products']);
 	Route::resource('events', 'EventsController', ['as' => 'manager']);

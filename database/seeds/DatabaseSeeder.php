@@ -20,10 +20,10 @@ class DatabaseSeeder extends Seeder
         ]);
 
         DB::table('products')->insert([
-          ['name' => 'Underwear RoFA', 'category' => 'Apparel', 'price' => 10000],
-          ['name' => 'Jersey RoFA', 'category' => 'Apparel', 'price' => 20000],
-          ['name' => 'Gloves RoFA', 'category' => 'Apparel', 'price' => 10000],
-          ['name' => 'Balaclava RoFA', 'category' => 'Apparel', 'price' => 10000]
+          ['name' => 'Polo Shirt RoFA', 'category' => 'Apparel', 'price' => 10000, 'weight' => 500],
+          ['name' => 'Jersey RoFA', 'category' => 'Apparel', 'price' => 20000, 'weight' => 500],
+          ['name' => 'Gloves RoFA', 'category' => 'Apparel', 'price' => 10000, 'weight' => 500],
+          ['name' => 'Balaclava RoFA', 'category' => 'Apparel', 'price' => 10000, 'weight' => 500]
         ]);
 
     }

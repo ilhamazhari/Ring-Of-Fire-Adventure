@@ -36,7 +36,7 @@ class EventsController extends Controller
     	if($request->hasfile('image')){
     		$image = $request->image;
 
-    		$currentTime = date('YmdHis');
+    		$currentTime = date('Ymd');
   			$name = $image->getClientOriginalName();
   			$newName = $currentTime . $name;
 
@@ -70,11 +70,40 @@ class EventsController extends Controller
 
     public function update(Request $request,Events $events)
     {
-    	//
+    	$request->validate([
+        'name' => 'required',
+        'start_date' => 'required',
+        'end_date' => 'required',
+        'price' => 'required|numeric',
+        'quantity' => 'required',
+      ]);
+
+      if($request->hasFile('image')){
+        $image = $request->image;
+
+        $name = date('Ymd') . $image->getClientOriginalName();
+
+        $image->move(public_path() . '/images/events/', $name);
+
+        $events->image = $name;
+      }
+
+      $events->name = $request->name;
+      $events->start_date = $request->start_date;
+      $events->end_date = $request->end_date;
+      $events->description = $request->description;
+      $events->price = $request->price;
+      $events->quantity = $request->quantity;
+      $events->save();
+
+      return redirect()->back()->with('success', 'Events updated successfully');
     }
 
     public function destroy(Events $events)
     {
-    	//
+      File::delete(public_path() . '/images/events' . $events->image);
+    	$events->delete();
+
+      return redirect()->back()->with('success', 'Event deleted successfully');
     }
 }

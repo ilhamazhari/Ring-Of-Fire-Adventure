@@ -16,6 +16,7 @@ class CreateContentImageTable extends Migration
         Schema::create('content_image', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->bigInteger('content_id');
+            $table->string('type');
             $table->string('filename');
             $table->string('alt')->nullable();
             $table->timestamps();

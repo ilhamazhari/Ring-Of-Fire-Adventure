@@ -85,7 +85,7 @@ class StoreController extends Controller
             'courier' => 'required'
         ]);
 
-        $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country_code, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
+        $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country_code, 'province' => $request->province, 'city' => $request->city, 'subdistrict' => $request->subdistrict, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
 
         $billDetails = new Transaction;
 
@@ -94,16 +94,18 @@ class StoreController extends Controller
         $transactioncode = "ROFA/".date("Y/m/d")."/".$transaction_id;
 
         $billDetails->transaction_code = $transactioncode;
+        $billDetails->type = 'Store';
         $billDetails->first_name = $request->first_name;
         $billDetails->last_name = $request->last_name;
         $billDetails->email = $request->email;
-        $billDetails->customer_address = json_encode($shipping_info);
+        $billDetails->customer_info = json_encode($shipping_info);
         $billDetails->billing_info = json_encode($shipping_info);
         $billDetails->shipping_info = json_encode($shipping_info);
         $billDetails->subtotal = $request->subtotal;
         $billDetails->tax = $request->tax;
-        $billDetails->shipping_price = $request->shipping_price;
         $billDetails->total = $request->total;
+        $billDetails->shipping_price = $request->shipping_price;
+        $billDetails->shipping_status = $request->courier . ': On Process';
         $billDetails->save();
 
         $transactionItem = new TransactionItem;

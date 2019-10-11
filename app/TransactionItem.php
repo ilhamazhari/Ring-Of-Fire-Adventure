@@ -8,7 +8,7 @@ class TransactionItem extends Model
 {
     protected $table = 'transaction_item';
 
-    protected $fillable = ['transaction_id', 'type', 'quantity', 'products_id', 'events_id'];
+    protected $fillable = ['transaction_id', 'quantity', 'products_id', 'events_id'];
 
     public function transaction()
     {

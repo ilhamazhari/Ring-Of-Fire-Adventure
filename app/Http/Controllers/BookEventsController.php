@@ -47,10 +47,11 @@ class BookEventsController extends Controller
       $transactioncode = "ROFA/".date("Y/m/d")."/".$transaction_id;
 
       $transaction->transaction_code = $transactioncode;
+      $transaction->type = 'Events';
       $transaction->first_name = $request->first_name;
       $transaction->last_name = $request->last_name;
       $transaction->email = $request->email;
-      $transaction->customer_address = json_encode($customer_info);
+      $transaction->customer_info = json_encode($customer_info);
       $transaction->billing_info = json_encode($customer_info);
       $transaction->shipping_info = json_encode($customer_info);
       $transaction->subtotal = $subtotal;

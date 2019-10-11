@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->string('category');
             $table->text('description')->nullable();
             $table->integer('price');
+            $table->integer('weight');
             $table->decimal('discount')->nullable();
             $table->string('tags')->nullable();
             $table->timestamps();

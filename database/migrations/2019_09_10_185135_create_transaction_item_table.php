@@ -16,7 +16,6 @@ class CreateTransactionItemTable extends Migration
         Schema::create('transaction_item', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('transaction_id');
-            $table->string('type');
             $table->integer('quantity');
             $table->integer('products_id')->nullable();
             $table->integer('events_id')->nullable();

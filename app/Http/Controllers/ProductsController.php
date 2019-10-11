@@ -32,6 +32,7 @@ class ProductsController extends Controller
 			'name' => 'required',
 			'category' => 'required',
 			'price' => 'required|numeric',
+      'weight' => 'required|numeric',
 			'discount' => 'numeric|nullable',
 		]);
 		
@@ -41,6 +42,7 @@ class ProductsController extends Controller
 		$products->category = $request->category;
 		$products->description = $request->description;
 		$products->price = $request->price;
+    $products->weight = $request->weight;
 		$products->discount = $request->discount;
 		$products->tags = $request->tags;
 		$products->save();
