@@ -45,13 +45,12 @@ class StoreController extends Controller
 
 			return redirect()->back()->with('success', 'Product added to cart successfully');
 		}else{
-			$cart = [
-				$products->id => [
+			$cart[$products->id] = [
 					'id' => $products->id,
 					'name' => $products->name,
+          'weight' => $products->weight,
 					'price' => $products->price,
 					'quantity' => 1
-				]
 			];
 			session()->put('cart', $cart);
 

@@ -43,11 +43,11 @@
 			<textarea name="address" cols="32" rows="8" placeholder="Address" class="form-control"></textarea>
 		</div>
 		<div class="form-group">
-			<select name="courier" class="form-control col-md-4">
+			<select name="courier" id="courier" class="form-control col-md-4">
 				<option>-- Courier Option --</option>
-				<option value="TIKI">TIKI</option>
-				<option value="JNE">JNE</option>
-				<option value="POS">POS Indonesia</option>
+				<option value="tiki">TIKI</option>
+				<option value="jne">JNE</option>
+				<option value="pos">POS Indonesia</option>
 				<option disabled="">International Shipment</option>
 				<option value="DHL">DHL</option>
 				<option value="FEDEX">Fedex</option>
@@ -60,6 +60,7 @@
 					<th scope="col">No.</th>
 					<th scope="col">Products</th>
 					<th scope="col">Qty</th>
+          <th scope="col">Weight</th>
 					<th scope="col">Price</th>
 					<th scope="col">Subtotal</th>
 				</tr>
@@ -68,6 +69,7 @@
 				@php
 				$no = 1;
 				$sub = 0;
+        $weightTotal = 0;
 				$total = 0;
 				@endphp
 				@foreach(Session::get('cart') as $cart)
@@ -79,19 +81,20 @@
 					<td scope="row">{{ $no }}</td>
 					<td>{{ $cart['name'] }}</td>
 					<td>{{ $cart['quantity'] }}</td>
+          <td>{{ $cart['weight'] }} gr</td>
 					<td>{{ number_format($cart['price']) }}</td>
 					<td>{{ number_format($sub) }}</td>
 				</tr>
 				@php
 					$no++;
+          $weightTotal += $cart['weight'];
 					$total += $sub;
 				@endphp
 				@endforeach
 
 				@php
-					$shipment = 10000;
 					$tax = $total*.1;
-					$totalAll = $total+$tax+$shipment;
+					$totalAll = $total+$tax;
 				@endphp
 				<tr>
 					<td colspan="4">Subtotal:</td>
@@ -99,21 +102,22 @@
 				</tr>
 				<tr>
 					<td colspan="4">Shipment:</td>
-					<td>{{ number_format($shipment) }}</td>
+					<td id="shipmentcost">0</td>
 				</tr>
 				<tr>
 					<td colspan="4">Tax:</td>
 					<td>{{ number_format($tax) }}</td>
 				</tr>
 				<tr>
-					<td colspan="4">Total:</td>
+					<td colspan="3">Total:</td>
+          <td>{{ $weightTotal }} gr</td>
 					<td>{{ number_format($totalAll) }}</td>
 				</tr>
 			</tbody>
 		</table>
 		<input type="hidden" name="subtotal" value="{{ $total }}">
 		<input type="hidden" name="tax" value="{{ $tax }}">
-		<input type="hidden" name="shipping_price" value="{{ $shipment }}">
+		<input type="hidden" name="shipping_price" id="shippingprice" value="0">
 		<input type="hidden" name="total" value="{{ $totalAll }}">
 		<div class="form-group">
 			<button type="submit" id="checkout-button">Checkout</button>
@@ -186,6 +190,35 @@
         $('#provinceCol').append('<input type="text" name="province" class="form-control" id="province" placeholder="State/Province" >');
         $('#cityCol').append('<input type="text" name="city" class="form-control" id="city" placeholder="City" >');
       }
+    });
+
+    $('#courier').change(function(){
+      var destination = $('#city').val();
+      /*$.post('https://api.rajaongkir.com/starter/cost', {
+        _method: 'POST',
+        _token: '{{ csrf_token() }}',
+        headers: {"key": '993470772892f46109d78eaf85f9ebab'},
+        origin: 153,
+        destination: destination,
+        weight: {{ $weightTotal }},
+        courier: $(this).val(),
+      });*/
+      $.ajax({
+        url: 'https://api.rajaongkir.com/starter/cost',
+        type: 'POST',
+        crossDomain: true,
+        headers: {  'Access-Control-Allow-Origin': 'https://api.rajaongkir.com/starter/cost', 'key': '993470772892f46109d78eaf85f9ebab' },
+        dataType: 'application/json',
+        contentType: 'application/x-www-form-urlencoded',
+        data: {
+          'origin': 153,
+          'destination': destination,
+          'weight': {{ $weightTotal }},
+          'courier': $(this).val()
+        },
+        success: function(data){ console.log(data); },
+        error: function(err){ console.log('Error: ' + err); },
+      });
     });
 
   });

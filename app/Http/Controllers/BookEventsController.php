@@ -38,7 +38,8 @@ class BookEventsController extends Controller
       $tax = $subtotal * 0.1;
       $total = $subtotal + $tax;
 
-      $customer_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address);
+      $general_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address);
+      $customer_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country, 'province' => $request->province, 'city' => $request->city, 'postal_code' => $request->postal_code, 'address' => $request->address, 'riders_data' => array('riders_name' => $request->riders_name, 'riders_email' => $request->riders_email, 'riders_phone' => $request->riders_phone, 'riders_address' => $request->riders_address, 'riders_blood', 'riders_vehicle' => $request->riders_vehicle, 'riders_vehicleplate' => $request->riders_vehicleplate), 'emergency_contact' => array('emergency_name' => $request->emergency_name, 'emergency_relation' => $request->emergency_relation, 'emergency_phone' => $request->emergency_phone));
 
       $transaction = new Transaction;
 
@@ -52,8 +53,8 @@ class BookEventsController extends Controller
       $transaction->last_name = $request->last_name;
       $transaction->email = $request->email;
       $transaction->customer_info = json_encode($customer_info);
-      $transaction->billing_info = json_encode($customer_info);
-      $transaction->shipping_info = json_encode($customer_info);
+      $transaction->billing_info = json_encode($general_info);
+      $transaction->shipping_info = json_encode($general_info);
       $transaction->subtotal = $subtotal;
       $transaction->tax = $tax;
       $transaction->shipping_price = 0;

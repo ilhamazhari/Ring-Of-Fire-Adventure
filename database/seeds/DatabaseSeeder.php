@@ -25,6 +25,5 @@ class DatabaseSeeder extends Seeder
           ['name' => 'Gloves RoFA', 'category' => 'Apparel', 'price' => 10000, 'weight' => 500],
           ['name' => 'Balaclava RoFA', 'category' => 'Apparel', 'price' => 10000, 'weight' => 500]
         ]);
-
     }
 }

@@ -51,21 +51,67 @@
               <div class="col"><input type="text" name="city" class="form-control" placeholder="City"></div>
               <div class="col"><input type="text" name="postal_code" class="form-control" placeholder="Postal Code"></div>
             </div>
-            <div class="form-group row">
-              <textarea name="address" class="form-control" rows="8" cols="32" placeholder="Address"></textarea>
-            </div>
             <div class="form-group">
-              <select name="quantity">
-                <option disabled selected>-- Quantity --</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
+              <textarea name="address" class="form-control" rows="8" placeholder="Address"></textarea>
+              <input type="hidden" name="quantity" value="1">
               <input type="hidden" name="shipping_price" value="0">
               <input type="hidden" name="events_id" value="{{ $ev->id }}">
             </div>
+
+            <hr>
+
+            <div id="ridersData">
+              <h5>Riders data</h5>
+              <div class="form-group">
+                <input type="text" name="riders_name" class="form-control" placeholder="Fullname">
+              </div>
+              <div class="form-group">
+                <input type="email" name="riders_email" class="form-control" placeholder="E-Mail">
+              </div>
+              <div class="form-group">
+                <input type="text" name="riders_phone" class="form-control" placeholder="Phone No.">
+              </div>
+              <div class="form-group">
+                <textarea name="riders_address" class="form-control" rows="8" placeholder="Address"></textarea>
+              </div>
+              <div class="form-group">
+                <select name="riders_blood" class="form-control">
+                  <option>-- Blood Type --</option>
+                  <option value="A">A</option>
+                  <option value="B">B</option>
+                  <option value="AB">AB</option>
+                  <option value="O">O</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" name="riders_vehicle" class="form-control" placeholder="Vehicle">
+              </div>
+              <div class="form-group">
+                <input type="text" name="riders_vehicleplate" class="form-control" placeholder="Plate No.">
+              </div>
+              
+              <h5>Emergency Contact</h5>
+              <div class="form-group">
+                <input type="text" name="emergency_name" class="form-control" placeholder="Emergency Contact Name">
+              </div>
+              <div class="form-group">
+                <select name="emergency_relation" class="form-control">
+                  <option>-- Relation --</option>
+                  <option value="Spouse">Spouse</option>
+                  <option value="Parents">Parents</option>
+                  <option value="Siblings">Siblings</option>
+                  <option value="Friends">Friends</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <input type="text" name="emergency_phone" class="form-control" placeholder="Phone">
+              </div>
+
+            </div>
+
+
           </div>
+          
 
           <div class="modal-footer">
             <button type="submit" class="btn btn-primary"><i class="fa fa-floppy-o"></i> Book Now</button>

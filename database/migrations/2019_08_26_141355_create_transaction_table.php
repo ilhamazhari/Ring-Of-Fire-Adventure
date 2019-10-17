@@ -26,6 +26,7 @@ class CreateTransactionTable extends Migration
             $table->integer('subtotal');
             $table->integer('tax');
             $table->integer('total');
+            $table->integer('totalweight');
             $table->string('status')->default('pending');
             $table->integer('shipping_price')->nullable();
             $table->string('shipping_status')->nullable();

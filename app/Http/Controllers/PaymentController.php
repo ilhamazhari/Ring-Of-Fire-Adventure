@@ -89,10 +89,10 @@ class PaymentController extends Controller
 
         foreach($transactionItem as $ti)
         {
-          if($ti->type == 'Store Transaction'){
+          if($transaction->type == 'Store'){
             $products = Products::where('id', $ti->products_id)->first();
             $item[] = array('id' => $products->id, 'name' => $products->name, 'price' => $products->price, 'quantity' => $ti->quantity);
-          }else if($ti->type == 'Event Booking'){
+          }else if($transaction->type == 'Events'){
             $events = Events::where('id', $ti->events_id)->first();
             $item[] = array('id' => $events->id, 'name' => $events->name, 'price' => $events->price, 'quantity' => $ti->quantity);
           }
