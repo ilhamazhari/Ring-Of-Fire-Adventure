@@ -10,7 +10,7 @@
 
 @include('layout.navigation')
 
-<div class="container">
+<div class="container page-padding-bottom">
   @php
   $i=1; 
   @endphp

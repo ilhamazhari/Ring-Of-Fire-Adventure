@@ -28,9 +28,11 @@ class CreateTransactionTable extends Migration
             $table->integer('total');
             $table->integer('totalweight');
             $table->string('status')->default('pending');
-            $table->integer('shipping_price')->nullable();
+            $table->string('courier_service')->nullable();
+            $table->integer('shipping_cost')->nullable();
             $table->string('shipping_status')->nullable();
             $table->string('snap_token')->nullable();
+            $table->string('resi')->nullable();
             $table->timestamps();
         });
     }

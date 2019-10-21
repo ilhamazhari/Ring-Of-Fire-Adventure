@@ -60,6 +60,14 @@ class PaymentController extends Controller
         }
     }
 
+    public function changeStatus(Request $request)
+    {
+      $transaction = Transaction::where('transaction_code', $request->transaction_code)->first();
+
+      $transaction->status = $request->status;
+      $transaction->save();
+    }
+
     public function snapToken(Request $request)
     {
         //$orderId = utf8_decode(urldecode($request->order_id));

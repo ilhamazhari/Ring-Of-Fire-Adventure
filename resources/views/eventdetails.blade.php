@@ -10,7 +10,7 @@
 
 @include('layout.navigation')
 
-<div class="container">
+<div class="container page-padding-bottom">
   @foreach($events as $ev)
 
   <img src="{{ url('/') }}/images/events/{{ $ev->image }}" width="100%">

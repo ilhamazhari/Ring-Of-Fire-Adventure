@@ -57,8 +57,9 @@ class BookEventsController extends Controller
       $transaction->shipping_info = json_encode($general_info);
       $transaction->subtotal = $subtotal;
       $transaction->tax = $tax;
-      $transaction->shipping_price = 0;
       $transaction->total = $total;
+      $transaction->totalweight = 0;
+      $transaction->shipping_cost = 0;
       $transaction->save();
 
       $transactionItem = new TransactionItem;

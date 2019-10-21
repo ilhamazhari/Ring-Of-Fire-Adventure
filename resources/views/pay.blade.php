@@ -10,7 +10,7 @@
 
 @include('layout.navigation')
 
-<div class="container">
+<div class="container page-padding-top-bottom">
 	<table class="table">
 		<thead>
 			<tr>
@@ -27,12 +27,12 @@
 			<tr>
 				<td scope="row"></td>
 				<td>{{ $bill->subtotal }}</td>
-				<td>{{ $bill->shipping_price }}</td>
+				<td>{{ $bill->shipping_cost }}</td>
 				<td>{{ $bill->tax }}</td>
 				<td>{{ $bill->total }}</td>
 			</tr>
 				@csrf
-				<input type="hidden" id="shipping_price" name="shipping_price" value="{{ $bill->shipping_price }}">
+				<input type="hidden" id="shipping_price" name="shipping_price" value="{{ $bill->shipping_cost }}">
 				<input type="hidden" id="tax" name="tax" value="{{ $bill->tax }}">
 				<input type="hidden" id="gross_amount" name="gross_amount"  value="{{ $bill->total }}">
 				<input type="hidden" id="order_id" name="order_id" value="{{ $bill->transaction_code }}">
@@ -69,6 +69,12 @@
 			function(data,status){
 				snap.pay(data.snap_token, {
 					onSuccess: function(result){
+            $.post('{{ route('payment.changestatus') }}', {
+              _method: "POST",
+              _token: "{{csrf_token()}}",
+              transaction_code: result.order_id,
+              status: 'settlement',
+            });
 						console.log(result);
 					},
 					onPending: function(result){

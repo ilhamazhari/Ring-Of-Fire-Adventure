@@ -75,48 +75,80 @@ class StoreController extends Controller
 	}
 
   public function storeCheckout(Request $request)
-    {
-        $request->validate([
-            'first_name' => 'required',
-            'last_name' => 'required',
-            'email' => 'required',
-            'phone' => 'required',
-            'courier' => 'required'
-        ]);
+  {
+    $request->validate([
+        'first_name' => 'required',
+        'last_name' => 'required',
+        'email' => 'required',
+        'phone' => 'required',
+        'courier' => 'required'
+    ]);
 
-        $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country_code, 'province' => $request->province, 'city' => $request->city, 'subdistrict' => $request->subdistrict, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
+    $shipping_info = array('first_name' => $request->first_name, 'last_name' => $request->last_name, 'email' => $request->email, 'phone' => $request->phone, 'country' => $request->country_code, 'province' => $request->province, 'city' => $request->city, 'subdistrict' => $request->subdistrict, 'postal_code' => $request->postal_code, 'address' => $request->address, 'courier' => $request->courier);
 
-        $billDetails = new Transaction;
+    $billDetails = new Transaction;
 
-        $transaction_id = Transaction::count();
-        $transaction_id += 1;
-        $transactioncode = "ROFA/".date("Y/m/d")."/".$transaction_id;
+    $transaction_id = Transaction::count();
+    $transaction_id += 1;
+    $transactioncode = "ROFA/".date("Y/m/d")."/".$transaction_id;
 
-        $billDetails->transaction_code = $transactioncode;
-        $billDetails->type = 'Store';
-        $billDetails->first_name = $request->first_name;
-        $billDetails->last_name = $request->last_name;
-        $billDetails->email = $request->email;
-        $billDetails->customer_info = json_encode($shipping_info);
-        $billDetails->billing_info = json_encode($shipping_info);
-        $billDetails->shipping_info = json_encode($shipping_info);
-        $billDetails->subtotal = $request->subtotal;
-        $billDetails->tax = $request->tax;
-        $billDetails->total = $request->total;
-        $billDetails->shipping_price = $request->shipping_price;
-        $billDetails->shipping_status = $request->courier . ': On Process';
-        $billDetails->save();
+    $billDetails->transaction_code = $transactioncode;
+    $billDetails->type = 'Store';
+    $billDetails->first_name = $request->first_name;
+    $billDetails->last_name = $request->last_name;
+    $billDetails->email = $request->email;
+    $billDetails->customer_info = json_encode($shipping_info);
+    $billDetails->billing_info = json_encode($shipping_info);
+    $billDetails->shipping_info = json_encode($shipping_info);
+    $billDetails->subtotal = $request->subtotal;
+    $billDetails->tax = $request->tax;
+    $billDetails->total = $request->total;
+    $billDetails->totalweight = $request->totalweight;
+    $billDetails->courier_service = $request->courier_service;
+    $billDetails->shipping_cost = $request->shipping_cost;
+    $billDetails->shipping_status = $request->courier . ': On Process';
+    $billDetails->save();
 
-        $transactionItem = new TransactionItem;
-        foreach($request->session()->get('cart') as $ca => $cart){
-          $transactionItem->transaction_id = $billDetails->id;
-          $transactionItem->quantity = $cart['quantity'];
-          $transactionItem->products_id = $cart['id'];
-          $transactionItem->save();
-        }
-
-        $billing = Transaction::where('transaction_code', $transactioncode)->get();
-
-        return view('pay', ['billing' => $billing]);
+    $transactionItem = new TransactionItem;
+    $item = [];
+    foreach($request->session()->get('cart') as $ca => $cart){
+      $item[] = [
+        'transaction_id' => $billDetails->id,
+        'quantity' => $cart['quantity'],
+        'products_id' => $cart['id'],
+      ];
     }
+    $transactionItem->insert($item);
+
+    $billing = Transaction::where('transaction_code', $transactioncode)->get();
+
+    return view('pay', ['billing' => $billing]);
+  }
+
+  public function getShippingCost(Request $request)
+  {
+    $curl = curl_init();
+    $apikey = config('app.rajaongkir');
+
+    curl_setopt_array($curl, array(
+      CURLOPT_URL => 'https://api.rajaongkir.com/starter/cost',
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => '',
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 30,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => 'POST',
+      CURLOPT_POSTFIELDS => 'origin='.$request->origin.'&destination='.$request->destination.'&weight='.$request->weight.'&courier='.$request->courier,
+      CURLOPT_HTTPHEADER => array(
+        'content-type: application/x-www-form-urlencoded',
+        'key: '.$apikey
+      ),
+    ));
+
+    $response = curl_exec($curl);
+
+    curl_close($curl);
+
+    return $response;
+  }
 }

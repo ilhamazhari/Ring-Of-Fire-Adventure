@@ -53,7 +53,7 @@ class ProductsController extends Controller
 
 	public function show(Products $product)
 	{
-		return response()->json($product);
+		return view('storedetails', ['product' => $product]);
 	}
 
 	public function edit(Products $product)

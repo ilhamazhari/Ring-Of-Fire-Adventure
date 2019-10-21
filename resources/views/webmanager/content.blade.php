@@ -71,6 +71,9 @@
             </select>
           </div>
           <div class="form-group">
+            <input type="file" name="imageheading" id="imageheading" class="form-control">
+          </div>
+          <div class="form-group">
             <textarea name="content" id="contentBody" class="summernote" rows="16" cols="64"></textarea>
           </div>
           <div class="form-group">

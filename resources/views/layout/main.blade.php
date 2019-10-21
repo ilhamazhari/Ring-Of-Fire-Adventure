@@ -7,6 +7,7 @@
 		<title>Ring of Fire Adventure | @yield('title')</title>
 		<meta name="title" content="Ring of Fire Adventure Indonesia">
 		<meta name="description" content="Explore Indonesia through our wonderful journey, we present Indonesia Nature, Culture and Heritage">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 		<link rel="shortcut icon" href="{{ URL::to('/') }}/images/rofa-logo.jpg">
 

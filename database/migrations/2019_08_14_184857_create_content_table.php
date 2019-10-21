@@ -17,6 +17,7 @@ class CreateContentTable extends Migration
             $table->bigIncrements('id');
             $table->string('title');
             $table->string('type');
+            $table->string('imageheading')->nullable();
             $table->longText('content');
             $table->string('tags')->nullable();
             $table->timestamps();

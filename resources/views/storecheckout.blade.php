@@ -11,7 +11,7 @@
 
 @include('layout.navigation')
 
-<div class="container">
+<div class="container page-padding-bottom">
 	<h1>Checkout Products</h1>
 	<hr>
 	<form id="checkout" method="POST" action="">
@@ -42,16 +42,18 @@
 		<div class="form-group">
 			<textarea name="address" cols="32" rows="8" placeholder="Address" class="form-control"></textarea>
 		</div>
-		<div class="form-group">
-			<select name="courier" id="courier" class="form-control col-md-4">
-				<option>-- Courier Option --</option>
-				<option value="tiki">TIKI</option>
-				<option value="jne">JNE</option>
-				<option value="pos">POS Indonesia</option>
-				<option disabled="">International Shipment</option>
-				<option value="DHL">DHL</option>
-				<option value="FEDEX">Fedex</option>
-			</select>
+		<div class="form-group row">
+      <div class="col-md-4">
+        <select name="courier" id="courier" class="form-control col-md-4">
+          <option>-- Courier Option --</option>
+          <option value="tiki">TIKI</option>
+          <option value="jne">JNE</option>
+          <option value="pos">POS Indonesia</option>
+        </select></div>
+      <div class="col-md-4">
+        <select name="courierservice" id="courierservice" class="form-control col-md-4"><option>-- Service Option --</option></select>
+      </div>
+			
 		</div>
 		<hr>
 		<table class="table">
@@ -97,28 +99,31 @@
 					$totalAll = $total+$tax;
 				@endphp
 				<tr>
-					<td colspan="4">Subtotal:</td>
+					<td colspan="5">Subtotal:</td>
 					<td>{{ number_format($total) }}</td>
 				</tr>
 				<tr>
-					<td colspan="4">Shipment:</td>
-					<td id="shipmentcost">0</td>
+					<td colspan="5">Shipping cost:</td>
+					<td id="shippingcost"></td>
 				</tr>
 				<tr>
-					<td colspan="4">Tax:</td>
+					<td colspan="5">Tax:</td>
 					<td>{{ number_format($tax) }}</td>
 				</tr>
 				<tr>
 					<td colspan="3">Total:</td>
           <td>{{ $weightTotal }} gr</td>
-					<td>{{ number_format($totalAll) }}</td>
+          <td></td>
+					<td id="totalall">{{ number_format($totalAll) }}</td>
 				</tr>
 			</tbody>
 		</table>
 		<input type="hidden" name="subtotal" value="{{ $total }}">
 		<input type="hidden" name="tax" value="{{ $tax }}">
-		<input type="hidden" name="shipping_price" id="shippingprice" value="0">
-		<input type="hidden" name="total" value="{{ $totalAll }}">
+    <input type="hidden" name="courier_service" id="courier_service" value="">
+		<input type="hidden" name="shipping_cost" id="shipping_cost" value="0">
+    <input type="hidden" name="totalweight" value="{{$weightTotal}}">
+		<input type="hidden" name="total" id="total_all" value="{{ $totalAll }}">
 		<div class="form-group">
 			<button type="submit" id="checkout-button">Checkout</button>
 		</div>
@@ -194,31 +199,40 @@
 
     $('#courier').change(function(){
       var destination = $('#city').val();
-      /*$.post('https://api.rajaongkir.com/starter/cost', {
-        _method: 'POST',
-        _token: '{{ csrf_token() }}',
-        headers: {"key": '993470772892f46109d78eaf85f9ebab'},
-        origin: 153,
-        destination: destination,
-        weight: {{ $weightTotal }},
-        courier: $(this).val(),
-      });*/
+      $('#courierservice').find('option').remove().end().append('<option>-- Service Option --</option>');
       $.ajax({
-        url: 'https://api.rajaongkir.com/starter/cost',
+        url: '{{ route('store-shipping-cost') }}',
         type: 'POST',
-        crossDomain: true,
-        headers: {  'Access-Control-Allow-Origin': 'https://api.rajaongkir.com/starter/cost', 'key': '993470772892f46109d78eaf85f9ebab' },
-        dataType: 'application/json',
-        contentType: 'application/x-www-form-urlencoded',
         data: {
-          'origin': 153,
-          'destination': destination,
-          'weight': {{ $weightTotal }},
-          'courier': $(this).val()
+          _token: '{{csrf_token()}}',
+          origin: '153',
+          destination: destination,
+          weight: {{ $weightTotal }},
+          courier: $(this).val()
         },
-        success: function(data){ console.log(data); },
-        error: function(err){ console.log('Error: ' + err); },
+        success: function(data){
+          var ongkir = JSON.parse(data);
+          $.each(ongkir.rajaongkir.results[0].costs, function(index, item){
+            $.each(item.cost, function(idx, itm){
+              $('#courierservice').append('<option value="' + item.description + '" data-price="' + itm.value + '">' + item.service + ' ' + item.description + ' Est. ' + itm.etd + ' Days - Rp ' + itm.value + '</option>');
+            });
+          });
+          console.log(ongkir.rajaongkir.results[0].costs);
+        },
+        error: function(err){ console.log('Error: ' + err); }
       });
+    });
+
+    $('#courierservice').change(function(){
+      var service = $('option:selected','#courier').val() + ' - ' + $('option:selected',this).val();
+      var serviceprice = parseInt($('option:selected',this).data('price'));
+      var total = parseInt($('#total_all').val()) + serviceprice;
+      console.log(serviceprice);
+      $('#shippingcost').append(serviceprice);
+      $('#shipping_cost').val(serviceprice);
+      $('#courier_service').val(service);
+      $('#totalall').empty().append(total);
+      $('#total_all').val(total);
     });
 
   });

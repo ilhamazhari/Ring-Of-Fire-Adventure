@@ -78,21 +78,19 @@
 
 		<div class="row">
 		@foreach($products->take(4) as $pro)
-		<div class="col">
-			<a href="{{ @URL::Route('store-products', str_replace(" ", "-", $pro->name) ) }}"> 
-				@foreach($pro->productImage->take(1) as $img)
-				<img width="100%" src="{{ url('/images/products') }}/{{ $img->filename }}"> 
-				@endforeach
-				<h3>{{ $pro->name }}</h3>
-			</a>
-			Rp {{ number_format($pro->price) }}<br>
-			<a href="{{ URL::Route('add-to-cart', $pro->id) }}" class="btn btn-primary">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+		  <div class="col">
+		    <a href="{{ @URL::Route('store-products', str_replace(" ", "-", $pro->name) ) }}"> 
+				  @foreach($pro->productImage->take(1) as $img)
+				  <img width="100%" src="{{ url('/images/products') }}/{{ $img->filename }}"> 
+				  @endforeach
+		      <h3>{{ $pro->name }}</h3>
+		    </a>
+		    Rp {{ number_format($pro->price) }}<br>
+		    <a href="{{ URL::Route('add-to-cart', $pro->id) }}" class="btn btn-primary">Add to Cart <i class="fa fa-shopping-cart"></i></a>
+		  </div>
+		@if($p % 3 == 0)
 		</div>
-		@if($p % 4)
-			
-		@else
-		</div>
-		<div class="row">
+    <div class="row">
 		@endif
 
 		@php
@@ -102,6 +100,7 @@
 		@endforeach
 		</div>
 	</div>
+  <div class="page-padding-bottom"></div>
 </div>
 
 @include('layout.footer')

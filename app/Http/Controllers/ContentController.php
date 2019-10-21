@@ -27,9 +27,19 @@ class ContentController extends Controller
         'content' => 'required',
       ]);
 
-      $detail = $this->contentImage($request->content);
-      
       $content = new Content;
+      $detail = $this->contentImage($request->content);
+
+      if($request->hasfile('imageheading')){
+        $name = $request->imageheading->getClientOriginalName();
+        $newName = date('Ymd') . '-' . $name;
+        $path = public_path('/images/content/');
+
+        $request->imageheading->move($path, $newName);
+        $content->imageheading = $newName;
+      }
+      
+      
       $content->title = $request->title;
       $content->type = $request->type;
       $content->content = $detail;

@@ -13,6 +13,10 @@ section {
 	padding: 0!important;
 }
 
+.page-padding-bottom {
+  padding-bottom: 40px;
+}
+
 .mobile_hide {
 	display: block;
 }
@@ -196,10 +200,6 @@ section {
 	width: 25%;
 }
 
-.store-heading:before, .store-heading:after {
-	width: 20rem;
-}
-
 .rofa-newsarticles h1:before, .store-heading:before {
 	right: 65%;
 }
@@ -358,6 +358,12 @@ section {
 	background-color: #fff;
 }
 
+@media screen and (max-width: 2560px) and (orientation: landscape) {
+  .store-heading:before, .store-heading:after {
+    width: 10vw;
+  }
+}
+
 @media screen and (max-width: 1600px) and (orientation: landscape) {
 
 	.nav-left .nav-item a {
@@ -376,6 +382,10 @@ section {
 	.rofa-home {
 		height: calc(100vh - 128px);
 	}
+
+  .store-heading:before, .store-heading:after {
+    width: 16vw;
+  }
 }
 
 @media screen and (max-width: 1280px) and (orientation: landscape) {
@@ -403,6 +413,12 @@ section {
 	.nav-item a {
 		padding: 5px 15px;
 	}
+}
+
+@media screen and (max-width: 1080px) and (orientation: landscape){
+  .store-heading:before, .store-heading:after {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 425px) and (orientation: portrait) {
@@ -535,4 +551,14 @@ section {
 	.rofa-footer .row .col-md-3, .rofa-footer .row .col-md-6, .rofa-footer .row .col {
 		text-align: center;
 	}
+
+  .rofa-newsarticles h1:before, .rofa-newsarticles h1:after, .store-heading:before, .store-heading:after {
+    display: none;
+  }
+
+  .carousel {
+    position: absolute !important;
+    top: 140px;
+    left: 0px;
+  }
 }

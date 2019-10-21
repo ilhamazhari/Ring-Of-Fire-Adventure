@@ -8,7 +8,7 @@ class Transaction extends Model
 {
     protected $table = 'transaction';
 
-    protected $fillable = ['transaction_code', 'type', 'first_name', 'last_name', 'customer_address', 'billing_info', 'shipping_info', 'subtotal', 'tax', 'shipment', 'total'];
+    protected $fillable = ['transaction_code', 'type', 'first_name', 'last_name', 'customer_address', 'billing_info', 'shipping_info', 'subtotal', 'tax', 'total', 'totalweight', 'status', 'courier_service', 'shipping_cost', 'shipping_status', 'snap_token', 'resi'];
 
     public function transactionItem()
     {

@@ -5,7 +5,7 @@
 	<ul class=" mobile_hide nav navbar-nav nav-left">
 		<li class="nav-item"><a href="{{ URL::Route('home') }}">HOME</a></li>
 		<li class="nav-item"><a href="#">ABOUT</a></li>
-		<li class="nav-item"><a href="#">ARTICLES</a></li>
+		<li class="nav-item"><a href="{{ URL::Route('articles') }}">ARTICLES</a></li>
 	</ul>
 
 	<div class="navbar-logo order-first order-md-0 d-flex">
@@ -57,7 +57,7 @@
 			<li class="nav-item"><a href="#" class="nav-link">ABOUT</a></li>
 			<li class="nav-item"><a href="{{ URL::Route('store') }}" class="nav-link">STORE</a></li>
 			<li class="nav-item"><a href="{{ URL::Route('events') }}" class="nav-link">EVENTS</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">ARTICLES</a></li>
+			<li class="nav-item"><a href="{{ URL::Route('articles') }}" class="nav-link">ARTICLES</a></li>
 			<li class="nav-item"><a href="#" class="nav-link">TRIP</a></li>
 			<li class="nav-item"><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
 		</ul>

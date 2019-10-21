@@ -237,4 +237,6 @@ return [
         '3ds' => env('MIDTRANS_3DS', true),
     ],
 
+    'rajaongkir' => env('RAJAONGKIR_API'),
+
 ];
