@@ -73,6 +73,14 @@ section {
 	color: #000;
 }
 
+.dropdown-login {
+  width: 300px;
+}
+
+.btn-group-login {
+  width: 100%;
+}
+
 .right-border-white {
 	border-right: 2px solid #fff;
 }

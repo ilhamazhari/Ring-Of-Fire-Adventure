@@ -15,37 +15,37 @@
 		<style type="text/css">
 			@font-face{
 				font-family: "Avenir Medium";
-				src: url('{{ URL::to('/') }}/fonts/Avenir-Medium.ttf');
+				src: url('{{ url('/') }}/fonts/Avenir-Medium.ttf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Bebas Neue Book";
-				src: url('{{ URL::to('/') }}/fonts/BebasNeueBook.otf');
+				src: url('{{ url('/') }}/fonts/BebasNeueBook.otf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Bebas Neue Regular";
-				src: url('{{ URL::to('/') }}/fonts/BebasNeueRegular.otf');
+				src: url('{{ url('/') }}/fonts/BebasNeueRegular.otf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Bebas Neue Bold";
-				src: url('{{ URL::to('/') }}/fonts/BebasNeueBold.otf');
+				src: url('{{ url('/') }}/fonts/BebasNeueBold.otf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Panton Light Caps";
-				src: url('{{ URL::to('/') }}/fonts/PANTON-LIGHTCAPS.OTF');
+				src: url('{{ url('/') }}/fonts/PANTON-LIGHTCAPS.OTF');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Panton Black Caps";
-				src: url('{{ URL::to('/') }}/fonts/PANTON-BLACKCAPS.OTF');
+				src: url('{{ url('/') }}/fonts/PANTON-BLACKCAPS.OTF');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Panton Black Italic Caps";
-				src: url('{{ URL::to('/') }}/fonts/PANTON-BLACKITALICCAPS.OTF');
+				src: url('{{ url('/') }}/fonts/PANTON-BLACKITALICCAPS.OTF');
 				font-display: swap;
 			}
 		</style>

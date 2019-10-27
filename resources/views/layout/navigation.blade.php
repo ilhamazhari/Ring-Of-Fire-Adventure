@@ -35,9 +35,19 @@
 			</li>
 			<li class="nav-item dropdown">
 				<a class="dropdown-toggle" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fa fa-user"></i></a>
-				<div class="dropdown-menu dropdown-menu-right" aria-labeledby="dropdownUser">
-					<a class="dropdown-item" href="#">Dropdown item 1</a>
-					<a class="dropdown-item" href="#">Dropdown item 2</a>
+				<div class="dropdown-menu dropdown-menu-right dropdown-login p-3" aria-labeledby="dropdownUser">
+          <form name="" class="form-horizontal" action="{{ route('member.login') }}" method="POST">
+            <div class="form-group">
+              <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+            </div>
+            <div class="btn-group btn-group-login" role="group">
+              <button type="submit" class="btn btn-primary col-md-6">Login</button>
+              <a href="#" class="btn btn-secondary col-md-6">Register</a>
+            </div>
+          </form>
 				</div>
 			</li>
 		</ul>

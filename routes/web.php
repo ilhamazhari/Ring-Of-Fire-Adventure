@@ -13,9 +13,6 @@
 
 Route::get('/', function () { return view('home'); })->name('home');
 
-// Articles
-// News
-
 Route::group(['prefix' => 'store'], function(){
 	Route::get('/', 'StoreController@index')->name('store');
 	Route::get('products/{productSlug}', 'StoreController@products')->name('store-products');
@@ -33,15 +30,19 @@ Route::group(['prefix' => 'events'], function(){
   Route::post('/booking/{events}', 'BookEventsController@eventBooking')->name('event-booking');
 });
 
+// Articles & News
 Route::group(['prefix' => 'articles'], function(){
   Route::get('/', 'ArticlesController@index')->name('articles');
   Route::get('/{content}', 'ArticlesController@contentDetails')->name('articles.details');
   Route::get('/news/{content}', 'ArticlesController@contentDetails')->name('news.details');
 });
 
+// Trip
 Route::group(['prefix' => 'trip'], function(){
 	//
 });
+
+
 
 // Payment gateway route
 Route::group(['prefix' => 'payment'], function(){
@@ -50,6 +51,11 @@ Route::group(['prefix' => 'payment'], function(){
 	Route::get('/finish', 'PaymentController@status')->name('payment.status');
 	Route::get('/notifications', 'PaymentController@notifications')->name('payment.notifications');
   Route::post('/changestatus', 'PaymentController@changeStatus')->name('payment.changestatus');
+});
+
+//RoFA Member
+Route::group(['prefix' => 'member'], function(){
+  Route::get('/login', 'MemberController@login')->name('member.login');
 });
 
 // RoFA Login and Signup
@@ -68,4 +74,7 @@ Route::group(['prefix' => 'webmanager', 'middleware' => 'auth'], function(){
 	Route::resource('events', 'EventsController', ['as' => 'manager']);
   Route::resource('transaction', 'TransactionController', ['as' => 'manager']);
   Route::post('transaction/submitresi', 'TransactionController@submitResi')->name('manager.transaction.submitresi');
+  Route::resource('bike', 'BikeController', ['as' => 'manager']);
+  Route::resource('trip', 'TripController', ['as' => 'manager']);
+  Route::resource('vendor', 'VendorController', ['as' => 'manager']);
 });

@@ -15,6 +15,11 @@ class CreateTripTable extends Migration
     {
         Schema::create('trip', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->text('content');
+            $table->integer('minimum_pax');
+            $table->integer('price');
+            $table->text('bikerent');
             $table->timestamps();
         });
     }

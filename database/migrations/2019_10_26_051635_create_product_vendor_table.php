@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBikerentTable extends Migration
+class CreateProductVendorTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateBikerentTable extends Migration
      */
     public function up()
     {
-        Schema::create('bikerent', function (Blueprint $table) {
+        Schema::create('product_vendor', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('manufacturer');
-            $table->string('type');
-            $table->string('model');
-            $table->string('image');
-            $table->text('specification');
+            $table->string('name');
+            $table->string('email');
+            $table->string('city_code');
+            $table->string('pic');
+            $table->text('shipping_address');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateBikerentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bikerent');
+        Schema::dropIfExists('product_vendor');
     }
 }
