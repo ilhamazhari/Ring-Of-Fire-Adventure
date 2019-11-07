@@ -1,3 +1,6 @@
+@php
+  header('Set-Cookie: cross-site-cookie=name; SameSite=None; Secure');
+@endphp
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
@@ -9,9 +12,9 @@
 		<meta name="description" content="Explore Indonesia through our wonderful journey, we present Indonesia Nature, Culture and Heritage">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<link rel="shortcut icon" href="{{ url('/') }}/images/rofa-logo.jpg">
+		<link rel="shortcut icon" href="{{ URL::to('/') }}/images/rofa-logo.jpg">
 
-		<link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/style.css">
+		<link rel="stylesheet" type="text/css" href="{{ URL::to('/') }}/css/style.css">
 		<style type="text/css">
 			@font-face{
 				font-family: "Avenir Medium";

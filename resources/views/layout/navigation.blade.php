@@ -38,10 +38,10 @@
 				<div class="dropdown-menu dropdown-menu-right dropdown-login p-3" aria-labeledby="dropdownUser">
           <form name="" class="form-horizontal" action="{{ route('member.login') }}" method="POST">
             <div class="form-group">
-              <input type="text" name="username" class="form-control" id="username" placeholder="Username">
+              <input type="text" name="email" class="form-control" id="email" placeholder="E-Mail" autocomplete="email">
             </div>
             <div class="form-group">
-              <input type="password" name="password" class="form-control" id="password" placeholder="Password">
+              <input type="password" name="password" class="form-control" id="password" placeholder="Password" autocomplete="password">
             </div>
             <div class="btn-group btn-group-login" role="group">
               <button type="submit" class="btn btn-primary col-md-6">Login</button>

@@ -8,7 +8,7 @@
 		<meta name="title" content="Ring of Fire Adventure Indonesia">
 		<meta name="description" content="Explore Indonesia through our wonderful journey, we present Indonesia Nature, Culture and Heritage">
 
-		<link rel="shortcut icon" href="{{ url('/images') }}/rofa-logo.jpg">
+		<link rel="shortcut icon" href="{{ URL::to('/') }}/rofa-logo.jpg">
 
 		<style type="text/css">
 			main {
