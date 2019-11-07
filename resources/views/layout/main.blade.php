@@ -9,43 +9,43 @@
 		<meta name="description" content="Explore Indonesia through our wonderful journey, we present Indonesia Nature, Culture and Heritage">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-		<link rel="shortcut icon" href="{{ URL::to('/') }}/images/rofa-logo.jpg">
+		<link rel="shortcut icon" href="{{ url('/') }}/images/rofa-logo.jpg">
 
-		<link rel="stylesheet" type="text/css" href="{{ URL::to('/') }}/css/style.css">
+		<link rel="stylesheet" type="text/css" href="{{ url('/') }}/css/style.css">
 		<style type="text/css">
 			@font-face{
 				font-family: "Avenir Medium";
-				src: url('{{ url('/') }}/fonts/Avenir-Medium.ttf');
+				src: url('{{ URL::to('/') }}/fonts/Avenir-Medium.ttf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Bebas Neue Book";
-				src: url('{{ url('/') }}/fonts/BebasNeueBook.otf');
+				src: url('{{ URL::to('/') }}/fonts/BebasNeueBook.otf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Bebas Neue Regular";
-				src: url('{{ url('/') }}/fonts/BebasNeueRegular.otf');
+				src: url('{{ URL::to('/') }}/fonts/BebasNeueRegular.otf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Bebas Neue Bold";
-				src: url('{{ url('/') }}/fonts/BebasNeueBold.otf');
+				src: url('{{ URL::to('/') }}/fonts/BebasNeueBold.otf');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Panton Light Caps";
-				src: url('{{ url('/') }}/fonts/PANTON-LIGHTCAPS.OTF');
+				src: url('{{ URL::to('/') }}/fonts/PANTON-LIGHTCAPS.OTF');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Panton Black Caps";
-				src: url('{{ url('/') }}/fonts/PANTON-BLACKCAPS.OTF');
+				src: url('{{ URL::to('/') }}/fonts/PANTON-BLACKCAPS.OTF');
 				font-display: swap;
 			}
 			@font-face{
 				font-family: "Panton Black Italic Caps";
-				src: url('{{ url('/') }}/fonts/PANTON-BLACKITALICCAPS.OTF');
+				src: url('{{ URL::to('/') }}/fonts/PANTON-BLACKITALICCAPS.OTF');
 				font-display: swap;
 			}
 		</style>
