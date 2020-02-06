@@ -77,7 +77,7 @@
 		@endphp
 
 		<div class="row">
-		@foreach($products->take(4) as $pro)
+		@foreach($products->take(8) as $pro)
 		  <div class="col">
 		    <a href="{{ @URL::Route('store-products', str_replace(" ", "-", $pro->name) ) }}"> 
 				  @foreach($pro->productImage->take(1) as $img)
@@ -88,7 +88,7 @@
 		    Rp {{ number_format($pro->price) }}<br>
 		    <a href="{{ URL::Route('add-to-cart', $pro->id) }}" class="btn btn-primary">Add to Cart <i class="fa fa-shopping-cart"></i></a>
 		  </div>
-		@if($p % 3 == 0)
+		@if($p % 4 == 0)
 		</div>
     <div class="row">
 		@endif

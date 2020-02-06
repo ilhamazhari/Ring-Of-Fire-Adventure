@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Products;
+use App\Vendor;
 
 class ProductsController extends Controller
 {
@@ -17,8 +18,9 @@ class ProductsController extends Controller
 	public function index()
 	{
 		$products = Products::all()->sortBy('name');
+    $vendor = Vendor::all();
 
-		return view('webmanager.products', [ 'products' => $products ]);
+		return view('webmanager.products', [ 'products' => $products, 'vendor' => $vendor ]);
 	}
 
 	public function create()
@@ -38,6 +40,7 @@ class ProductsController extends Controller
 		
 		$products = new Products;
 
+    $products->vendor_id = $request->vendor;
 		$products->name = $request->name;
 		$products->category = $request->category;
 		$products->description = $request->description;

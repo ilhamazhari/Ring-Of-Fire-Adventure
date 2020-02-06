@@ -18,8 +18,8 @@ class CreateProductVendorTable extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('city_code');
-            $table->string('pic');
-            $table->text('shipping_address');
+            $table->string('pic')->nullable();
+            $table->text('shipping_address'); // json
             $table->timestamps();
         });
     }

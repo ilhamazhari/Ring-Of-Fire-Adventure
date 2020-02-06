@@ -12,6 +12,9 @@
 */
 
 Route::get('/', function () { return view('home'); })->name('home');
+Route::post('/login', 'MemberController@login')->name('login');
+Route::get('/register', function(){ return view('registration'); })->name('registration');
+Route::post('/register', 'MemberController@register')->name('registermember');
 
 Route::group(['prefix' => 'store'], function(){
 	Route::get('/', 'StoreController@index')->name('store');

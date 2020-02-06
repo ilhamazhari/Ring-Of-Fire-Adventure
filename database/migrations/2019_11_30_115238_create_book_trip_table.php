@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBikerentTable extends Migration
+class CreateBookTripTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateBikerentTable extends Migration
      */
     public function up()
     {
-        Schema::create('bikerent', function (Blueprint $table) {
+        Schema::create('book_trip', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('manufacturer');
-            $table->string('type');
-            $table->string('model');
-            $table->string('image');
-            $table->text('specification'); // json
+            $table->integer('trip_id');
+            $table->integer('member_id')->nullable();
+            $table->date('booking_date');
+            $table->integer('quantity');
+            $table->text('billing_info'); // json
+            $table->text('customer_info'); // json
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateBikerentTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bikerent');
+        Schema::dropIfExists('book_trip');
     }
 }

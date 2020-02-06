@@ -29,6 +29,7 @@
 			<th>Category</th>
 			<th>Price</th>
       <th>Weight</th>
+      <th>Vendor</th>
 			<th>Discount</th>
 			<th>Tags</th>
 			<th>Action</th>
@@ -46,6 +47,7 @@
 			<td>{{ $prd->category }}</td>
 			<td>{{ $prd->price }}</td>
       <td>{{ $prd->weight }}</td>
+      <td>{{ $prd->productVendor->name }}</td>
 			<td>{{ $prd->discount }}</td>
 			<td>{{ $prd->tags }}</td>
 			<td>
@@ -83,8 +85,22 @@
 
 				<div class="modal-body">
 
-						<div class="form-group">
-							<input type="text" name="name" class="form-control" id="addName" placeholder="Product Name">
+						<div class="row">
+              <div class="col-md-8">
+                <div class="form-group">
+                  <input type="text" name="name" class="form-control" id="addName" placeholder="Product Name">
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <select class="form-control" name="vendor">
+                    <option selected disabled>-- Vendor --</option>
+                    @foreach($vendor as $v)
+                    <option value="{{$v->id}}">{{$v->name}}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
 						</div>
 						<div class="form-group">
 						 <input type="text" name="category" class="form-control" id="addCategory" placeholder="Product Category">
@@ -141,8 +157,23 @@
 
 				<div class="modal-body">
 
+            <div class="row">
+              <div class="col-md-8">
+                <div class="form-group"><input type="text" name="name" class="form-control" id="editName" placeholder="Product Name"></div>
+              </div>
+              <div class="col-md-4">
+                <div class="form-group">
+                  <select name="vendor" class="form-control" id="editVendor">
+                    <option selected disabled>-- Vendor --</option>
+                    @foreach($vendor as $v)
+                    <option value="{{$v->id}}">{{$v->name}}</option>
+                    @endforeach
+                  </select>
+                </div>
+              </div>
+            </div>
 						<div class="form-group">
-							<input type="text" name="name" class="form-control" id="editName" placeholder="Product Name">
+							
 						</div>
 						<div class="form-group">
 						 <input type="text" name="category" class="form-control" id="editCategory" placeholder="Product Category">

@@ -26,6 +26,7 @@ class CreateMemberTable extends Migration
             $table->text('shipping_info');
             $table->text('bike_info');
             $table->text('emergency_contact');
+            $table->text('medical_history');
             $table->rememberToken();
             $table->timestamps();
         });

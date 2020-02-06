@@ -18,8 +18,9 @@ class CreateTripTable extends Migration
             $table->string('name');
             $table->text('content');
             $table->integer('minimum_pax');
-            $table->integer('price');
-            $table->text('bikerent');
+            $table->integer('maximum_pax');
+            $table->integer('price'); // Price per pax
+            $table->text('bikerent'); // json
             $table->timestamps();
         });
     }

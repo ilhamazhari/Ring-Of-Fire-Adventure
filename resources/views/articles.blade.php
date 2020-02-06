@@ -7,6 +7,7 @@
 @include('layout.navigation')
 
 <div class="container">
+  @if(!empty($news))
   <h1>NEWS</h1>
   <div class="row">
     @php
@@ -30,8 +31,10 @@
       $n++;
     @endphp
     @endforeach
+    @endif
   </div>
   <div class="page-padding-bottom"></div>
+  @if(!empty($articles))
   <h1>ARTICLES</h1>
   @php
     $a = 1;
@@ -43,7 +46,7 @@
     <div class="col-md-4">
       <a href="{{ route('articles.details', $linkarticles) }}">
         <img src="{{url('/images/content')}}/{{$at->imageheading}}" width="100%">
-        <h3>{{$nw->title}}</h3>
+        <h3>{{$at->title}}</h3>
       </a>
     </div>
     @if($a % 3 == 0)
@@ -51,6 +54,7 @@
   <div class="row">
     @endif
     @endforeach
+  @endif
   <div class="page-padding-bottom"></div>
 </div>
 

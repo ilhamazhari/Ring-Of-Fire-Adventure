@@ -40,22 +40,20 @@ class BikeController extends Controller
         $currentTime = date('Ymd');
         $name = $image->getClientOriginalName();
         $newName = $currentTime . '-' . $name;
-        $path = public_path('/images/events/');
+        $path = public_path('/images/bike/');
 
         $image->move($path, $newName);
 
-        $events = new Events;
+        $bike = new Bike;
 
-        $events->name = $request->name;
-        $events->image = $newName;
-        $events->start_date = $request->start_date;
-        $events->end_date = $request->end_date;
-        $events->description = $request->description;
-        $events->price = $request->price;
-        $events->quantity = $request->quantity;
-        $events->save();
+        $bike->manufacturer = $request->manufacturer;
+        $bike->type = $request->type;
+        $bike->model = $request->model;
+        $bike->specification = $request->specification;
+        $bike->image = $newName;
+        $bike->save();
 
-        return redirect()->back()->with('success', 'Events added successfully');
+        return redirect()->back()->with('success', 'Bike added successfully');
       }else{
         return redirect()->back()->with('error', 'Some field missing!');
       }

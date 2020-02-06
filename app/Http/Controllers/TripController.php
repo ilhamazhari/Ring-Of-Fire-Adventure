@@ -9,7 +9,9 @@ class TripController extends Controller
 {
     public function index()
     {
-      //
+      $trip = Trip::all();
+
+      return view('trip', ['trip' => $trip]);
     }
 
     public function show(Trip $trip)
