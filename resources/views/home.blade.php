@@ -84,26 +84,26 @@
 		<div id="stage1" class="tab-pane fade in active show">
 			<div class="row">
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap/preview?usp=drivesdk" data-target="#modalVideo">
-						<img src="https://lh3.googleusercontent.com/gwd6lb1mtS-Wsm3V1cDhA-ey53OfdxaIRciyfPpmwh61MRVV5PtSptnNuPAhpbZLNb_5tSWO27A=s360" width="100%"/>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap/preview?usp=sharing" data-target="#modalVideo">
+						<img src="https://lh3.google.com/u/2/d/1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap=w360-h240-p-k-nu-iv1" width="100%"/>
 						<p><b>Kompilasi 1</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/a/rofa.id/file/d/1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q/preview" data-target="#modalVideo">
-						<img src="https://lh3.googleusercontent.com/PwUEtI9Z0IiAEvigTHCu5SVFQG6m6QnlIzGg1Bb5soXKACS0G4nvlkv-SQcEYqI3CgW1UbKrPyA=s400" width="100%"/>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q/preview?usp=sharing" data-target="#modalVideo">
+						<img src="https://lh3.google.com/u/2/d/1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q=w360-h240-p-k-nu-iv1" width="100%"/>
 						<p><b>Kompilasi 2</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/a/rofa.id/file/d/1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa/preview" data-target="#modalVideo">
-						<img src="https://lh3.googleusercontent.com/UtbkA-YOnis3wqNYyIuJT1C-ZNskV3MjHjyhK9_3DG_KdZG_276dMDCxXCs1j6FohaqXLie8wIs=s400" width="100%"/>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa/preview?usp=sharing" data-target="#modalVideo">
+						<img src="https://lh3.google.com/u/2/d/1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa=w360-h240-p-k-nu-iv1" width="100%"/>
 						<p><b>Kompilasi 3</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/a/rofa.id/file/d/159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG/preview" data-target="#modalVideo">
-						<img src="https://lh3.googleusercontent.com/IO5T06ypnTTm959BusLPhKAPh_1FkTuEKQsKR0nUUrhGAs7KKQNDl2Wq5pEsUlm7-UC56egDXjI=s400" width="100%"/>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG/preview?usp=sharing" data-target="#modalVideo">
+						<img src="https://lh3.google.com/u/2/d/159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG=w360-h240-p-k-nu-iv1" width="100%"/>
 						<p><b>Kompilasi 4</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
