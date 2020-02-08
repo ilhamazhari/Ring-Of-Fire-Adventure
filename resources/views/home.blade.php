@@ -45,7 +45,7 @@
 <section class="rofa-home">
 	<div class="video-bg">
 		<video loop autoplay muted>
-			<source src="video/rofa-video-bg.mp4" type="video/mp4">
+			<source src="video/rofa-opening.mp4" type="video/mp4">
 		</video>
 	</div>
 
@@ -166,30 +166,104 @@
 		<div id="tab3" class="tab-pane fade">
 			<div class="row">
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="" data-target="#modalVideo">
-            <img src="https://lh3.google.com/u/2/d/=w360-h240-p-k-nu-iv1" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1VZ2PjFJJzQ0V5GgHTsQEINW0iNWxTzZW/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/1VZ2PjFJJzQ0V5GgHTsQEINW0iNWxTzZW=w360-h240-p-k-nu-iv1" width="100%">
+						<p><b>Ring Of Fire Adventure Stage 2 Episode 1</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
-						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1RXO3AVkJbHnSHseOx2Gm44gI5ZiciaGr/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/1RXO3AVkJbHnSHseOx2Gm44gI5ZiciaGr=w360-h240-p-k-nu-iv1" width="100%">
+						<p><b>Ring Of Fire Adventure Stage 2 Episode 2</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
-						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/15vrRkFkPs27EygpqLdBbOTOT5YEZdu05/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/15vrRkFkPs27EygpqLdBbOTOT5YEZdu05=w360-h240-p-k-nu-iv1" width="100%">
+						<p><b>Ring Of Fire Adventure Stage 2 Episode 3</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
-						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/17ZQi5LcETxjcF3MazDOmjAsZzy9pcPtt/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/17ZQi5LcETxjcF3MazDOmjAsZzy9pcPtt=w360-h240-p-k-nu-iv1" width="100%">
+						<p><b>Ring Of Fire Adventure Stage 2 Episode 4</b></p>
 					</a>
 				</div>
 			</div>
+
+      <div class="row">
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1PLmjOr-o-lg9bDqgAvbITiEyG4sqM7hY/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/1PLmjOr-o-lg9bDqgAvbITiEyG4sqM7hY=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 5</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1JuJAIZcTKn7FQmlWiF-kVUto35k22hro/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/1JuJAIZcTKn7FQmlWiF-kVUto35k22hro=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 6</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/18IxXd-Q44Vjaf9-m5LpeBIeJ-XknEjnp/view?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/18IxXd-Q44Vjaf9-m5LpeBIeJ-XknEjnp=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 7</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/16uN9oh4TRrncGBVaLucSOZIL9jU1SGCW/view?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/16uN9oh4TRrncGBVaLucSOZIL9jU1SGCW=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 8</b></p>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1D4AvqhoACfp7eLBF3vdIv4GrsNVmx5n-/view?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/1D4AvqhoACfp7eLBF3vdIv4GrsNVmx5n-=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 9</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1CTga_NG3Qg0JmK1OR9991xmMnmv1Xett/view?usp=sharing" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/1CTga_NG3Qg0JmK1OR9991xmMnmv1Xett=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 10</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 11</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 12</b></p>
+          </a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 13</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/=w360-h240-p-k-nu-iv1" width="100%">
+            <p><b>Ring Of Fire Adventure Stage 2 Episode 14</b></p>
+          </a>
+        </div>
+        <div class="col">
+        </div>
+        <div class="col">
+        </div>
+      </div>
+
 		</div>
 		<div id="tab4" class="tab-pane fade">
 			<div class="row">
