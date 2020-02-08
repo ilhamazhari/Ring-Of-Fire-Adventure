@@ -4,7 +4,7 @@
 
 	<ul class=" mobile_hide nav navbar-nav nav-left">
 		<li class="nav-item"><a href="{{ URL::Route('home') }}">HOME</a></li>
-		<li class="nav-item"><a href="#">ABOUT</a></li>
+		<li class="nav-item"><a href="{{ URL::Route('about') }}">ABOUT</a></li>
 		<li class="nav-item"><a href="{{ URL::Route('articles') }}">ARTICLES</a></li>
 	</ul>
 

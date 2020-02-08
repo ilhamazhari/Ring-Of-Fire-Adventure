@@ -74,98 +74,124 @@
 	<h1>DISCOVER OUR JOURNEY</h1>
 	<div class="space-100"></div>
 	<ul class="nav">
-		<li class="nav-item right-border-white"><a href="#stage1" data-toggle="tab" class="nav-link active">Kompilasi</a></li>
-		<li class="nav-item right-border-white"><a href="#stage2" data-toggle="tab" class="nav-link">STAGE 2</a></li>
-		<li class="nav-item right-border-white"><a href="#stage3" data-toggle="tab" class="nav-link">STAGE 3</a></li>
-		<li class="nav-item right-border-white"><a href="#stage4" data-toggle="tab" class="nav-link">STAGE 4</a></li>
-		<li class="nav-item"><a href="#stage5" data-toggle="tab" class="nav-link">STAGE 5</a></li>
+		<li class="nav-item right-border-white"><a href="#tab1" data-toggle="tab" class="nav-link active">Kompilasi</a></li>
+		<li class="nav-item right-border-white"><a href="#tab2" data-toggle="tab" class="nav-link">STAGE 1</a></li>
+		<li class="nav-item right-border-white"><a href="#tab3" data-toggle="tab" class="nav-link">STAGE 2</a></li>
+		<li class="nav-item right-border-white"><a href="#tab4" data-toggle="tab" class="nav-link">STAGE 3</a></li>
+		<li class="nav-item"><a href="#tab5" data-toggle="tab" class="nav-link">STAGE 4</a></li>
 	</ul>
 	<div class="stage-content tab-content">
-		<div id="stage1" class="tab-pane fade in active show">
+		<div id="tab1" class="tab-pane fade in active show">
 			<div class="row">
 				<div class="col">
 					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap/preview?usp=sharing" data-target="#modalVideo">
-						<img src="https://lh3.google.com/u/2/d/1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap=w360-h240-p-k-nu-iv1" width="100%"/>
+						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap" width="100%"/>
 						<p><b>Kompilasi 1</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
 					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q/preview?usp=sharing" data-target="#modalVideo">
-						<img src="https://lh3.google.com/u/2/d/1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q=w360-h240-p-k-nu-iv1" width="100%"/>
+						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q" width="100%"/>
 						<p><b>Kompilasi 2</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
 					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa/preview?usp=sharing" data-target="#modalVideo">
-						<img src="https://lh3.google.com/u/2/d/1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa=w360-h240-p-k-nu-iv1" width="100%"/>
+						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa" width="100%"/>
 						<p><b>Kompilasi 3</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
 					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG/preview?usp=sharing" data-target="#modalVideo">
-						<img src="https://lh3.google.com/u/2/d/159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG=w360-h240-p-k-nu-iv1" width="100%"/>
+						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG" width="100%"/>
 						<p><b>Kompilasi 4</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 			</div>
 		</div>
-		<div id="stage2" class="tab-pane fade">
+		<div id="tab2" class="tab-pane fade">
 			<div class="row">
 				<div class="col">
-					<a href="https://www.youtube.com/watch?v=E6WyQkYqGac" target="_blank">
-						<img src="http://img.youtube.com/vi/E6WyQkYqGac/0.jpg" width="100%">
-						<p><b>Ring of Fire and Friends At Indonesian Moto Adventure Safari</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1VNj1-2zu7KADHXnp9JHsOEp4l8F4cDBk/preview?usp=sharing" data-target="#modalVideo">
+						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1VNj1-2zu7KADHXnp9JHsOEp4l8F4cDBk" width="100%">
+						<p><b>Ring of Fire Adventure Stage 1 Episode 1</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="https://www.youtube.com/watch?v=E6WyQkYqGac" target="_blank">
-						<img src="http://img.youtube.com/vi/E6WyQkYqGac/0.jpg" width="100%">
-						<p><b>Ring of Fire and Friends At Indonesian Moto Adventure Safari</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1sEnasnqr4p25NP1rA3leprL4RENqOmDU/preview?usp=sharing" data-target="#modalVideo">
+						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1sEnasnqr4p25NP1rA3leprL4RENqOmDU" width="100%">
+						<p><b>Ring of Fire Adventure Stage 1 Episode 2</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="https://www.youtube.com/watch?v=E6WyQkYqGac" target="_blank">
-						<img src="http://img.youtube.com/vi/E6WyQkYqGac/0.jpg" width="100%">
-						<p><b>Ring of Fire and Friends At Indonesian Moto Adventure Safari</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1PdnC-dIJZXHwm0X9bU1wRC3cvI3HfeC9/preview?usp=sharing" data-target="#modalVideo">
+						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1PdnC-dIJZXHwm0X9bU1wRC3cvI3HfeC9" width="100%">
+						<p><b>Ring of Fire Adventure Stage 1 Episode 4</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="https://www.youtube.com/watch?v=E6WyQkYqGac" target="_blank">
-						<img src="http://img.youtube.com/vi/E6WyQkYqGac/0.jpg" width="100%">
-						<p><b>Ring of Fire and Friends At Indonesian Moto Adventure Safari</b></p>
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1ihaxwbairYWqbs4gZxbZueBAysqjGEts/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1ihaxwbairYWqbs4gZxbZueBAysqjGEts" width="100%">
+						<p><b>Ring of Fire Adventure Stage 1 Episode 5</b></p>
+					</a>
+				</div>
+			</div>
+      <div class="row">
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BlWQ92l7trqblWaksAV3qkpsHAEOpmzZ/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1BlWQ92l7trqblWaksAV3qkpsHAEOpmzZ" width="100%">
+            <p><b>Ring of Fire Adventure Stage 1 Episode 6</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1mBM5W2Lv-F-lOaNPeTlbFDGLk2QWtNlS/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1mBM5W2Lv-F-lOaNPeTlbFDGLk2QWtNlS" width="100%">
+            <p><b>Ring of Fire Adventure Stage 1 Episode 7</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1Ww6blGX3-E_pOaO8IUXSCHcFCI1zzWg9/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1Ww6blGX3-E_pOaO8IUXSCHcFCI1zzWg9" width="100%">
+            <p><b>Ring of Fire Adventure Stage 1 Episode 8</b></p>
+          </a>
+        </div>
+        <div class="col">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1j6Fz2BEsnE4ZBvbRTamUDrw4XLPaaWTX/preview?usp=sharing" data-target="#modalVideo">
+            <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1j6Fz2BEsnE4ZBvbRTamUDrw4XLPaaWTX" width="100%">
+            <p><b>Ring of Fire Adventure Stage 1 Episode 9</b></p>
+          </a>
+        </div>
+      </div>
+		</div>
+		<div id="tab3" class="tab-pane fade">
+			<div class="row">
+				<div class="col">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="" data-target="#modalVideo">
+            <img src="https://lh3.google.com/u/2/d/=w360-h240-p-k-nu-iv1" width="100%">
+						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
+					</a>
+				</div>
+				<div class="col">
+					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
+						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
+						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
+					</a>
+				</div>
+				<div class="col">
+					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
+						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
+						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
+					</a>
+				</div>
+				<div class="col">
+					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
+						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
+						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
 					</a>
 				</div>
 			</div>
 		</div>
-		<div id="stage3" class="tab-pane fade">
-			<div class="row">
-				<div class="col">
-					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
-						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
-					</a>
-				</div>
-				<div class="col">
-					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
-						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
-					</a>
-				</div>
-				<div class="col">
-					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
-						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
-					</a>
-				</div>
-				<div class="col">
-					<a href="https://www.youtube.com/watch?v=5pvFHVcM7wM" target="_blank">
-						<img src="http://img.youtube.com/vi/5pvFHVcM7wM/0.jpg" width="100%">
-						<p><b>MXGP RoFA Palangkaraya 2017</b></p>
-					</a>
-				</div>
-			</div>
-		</div>
-		<div id="stage4" class="tab-pane fade">
+		<div id="tab4" class="tab-pane fade">
 			<div class="row">
 				<div class="col">
 					<a href="https://www.youtube.com/watch?v=nEYm8oJrKoU" target="_blank">
@@ -193,7 +219,7 @@
 				</div>
 			</div>
 		</div>
-		<div id="stage5" class="tab-pane fade">
+		<div id="tab5" class="tab-pane fade">
 			<div class="row">
 				<div class="col">
 					<a href="https://www.youtube.com/watch?v=uEp9RrGPAZ4" target="_blank">

@@ -12,6 +12,7 @@
 */
 
 Route::get('/', function () { return view('home'); })->name('home');
+Route::get('/about', function () { return view('about'); })->name('about');
 Route::post('/login', 'MemberController@login')->name('login');
 Route::get('/register', function(){ return view('registration'); })->name('registration');
 Route::post('/register', 'MemberController@register')->name('registermember');
