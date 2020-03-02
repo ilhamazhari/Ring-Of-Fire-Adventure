@@ -83,25 +83,25 @@
 		<div id="tab1" class="tab-pane fade in active show">
 			<div class="row">
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap/preview?authuser=0" data-target="#modalVideo">
 						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1BfLTQcpt9prQJw9BXpZaqEk5QlWY-Qap" width="100%"/>
 						<p><b>Kompilasi 1</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q/preview?authuser=0" data-target="#modalVideo">
 						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1W2-kX58uzoI7JNy8vDaHJVwxFgJJAA4q" width="100%"/>
 						<p><b>Kompilasi 2</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa/preview?authuser=0" data-target="#modalVideo">
 						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1GYKNQYGvKgkFv3JAZk5zgb-gvs7wTsLa" width="100%"/>
 						<p><b>Kompilasi 3</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG/preview?authuser=0" data-target="#modalVideo">
 						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=159Q338CVT6PbOvjDt8fKKVOaxNxW9mMG" width="100%"/>
 						<p><b>Kompilasi 4</b><br>Ring of Fire Adventure Kompilasi</p>
 					</a>
@@ -111,25 +111,25 @@
 		<div id="tab2" class="tab-pane fade">
 			<div class="row">
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1VNj1-2zu7KADHXnp9JHsOEp4l8F4cDBk/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1VNj1-2zu7KADHXnp9JHsOEp4l8F4cDBk/preview?authuser=0" data-target="#modalVideo">
 						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1VNj1-2zu7KADHXnp9JHsOEp4l8F4cDBk" width="100%">
 						<p><b>Ring of Fire Adventure Stage 1 Episode 1</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1sEnasnqr4p25NP1rA3leprL4RENqOmDU/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1sEnasnqr4p25NP1rA3leprL4RENqOmDU/preview?authuser=0" data-target="#modalVideo">
 						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1sEnasnqr4p25NP1rA3leprL4RENqOmDU" width="100%">
 						<p><b>Ring of Fire Adventure Stage 1 Episode 2</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1PdnC-dIJZXHwm0X9bU1wRC3cvI3HfeC9/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1PdnC-dIJZXHwm0X9bU1wRC3cvI3HfeC9/preview?authuser=0" data-target="#modalVideo">
 						<img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1PdnC-dIJZXHwm0X9bU1wRC3cvI3HfeC9" width="100%">
 						<p><b>Ring of Fire Adventure Stage 1 Episode 4</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1ihaxwbairYWqbs4gZxbZueBAysqjGEts/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1ihaxwbairYWqbs4gZxbZueBAysqjGEts/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1ihaxwbairYWqbs4gZxbZueBAysqjGEts" width="100%">
 						<p><b>Ring of Fire Adventure Stage 1 Episode 5</b></p>
 					</a>
@@ -137,25 +137,25 @@
 			</div>
       <div class="row">
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BlWQ92l7trqblWaksAV3qkpsHAEOpmzZ/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1BlWQ92l7trqblWaksAV3qkpsHAEOpmzZ/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1BlWQ92l7trqblWaksAV3qkpsHAEOpmzZ" width="100%">
             <p><b>Ring of Fire Adventure Stage 1 Episode 6</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1mBM5W2Lv-F-lOaNPeTlbFDGLk2QWtNlS/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1mBM5W2Lv-F-lOaNPeTlbFDGLk2QWtNlS/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1mBM5W2Lv-F-lOaNPeTlbFDGLk2QWtNlS" width="100%">
             <p><b>Ring of Fire Adventure Stage 1 Episode 7</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1Ww6blGX3-E_pOaO8IUXSCHcFCI1zzWg9/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1Ww6blGX3-E_pOaO8IUXSCHcFCI1zzWg9/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1Ww6blGX3-E_pOaO8IUXSCHcFCI1zzWg9" width="100%">
             <p><b>Ring of Fire Adventure Stage 1 Episode 8</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1j6Fz2BEsnE4ZBvbRTamUDrw4XLPaaWTX/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1j6Fz2BEsnE4ZBvbRTamUDrw4XLPaaWTX/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1j6Fz2BEsnE4ZBvbRTamUDrw4XLPaaWTX" width="100%">
             <p><b>Ring of Fire Adventure Stage 1 Episode 9</b></p>
           </a>
@@ -165,25 +165,25 @@
 		<div id="tab3" class="tab-pane fade">
 			<div class="row">
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1VZ2PjFJJzQ0V5GgHTsQEINW0iNWxTzZW/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1VZ2PjFJJzQ0V5GgHTsQEINW0iNWxTzZW/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1VZ2PjFJJzQ0V5GgHTsQEINW0iNWxTzZW" width="100%">
 						<p><b>Ring Of Fire Adventure Stage 2 Episode 1</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1RXO3AVkJbHnSHseOx2Gm44gI5ZiciaGr/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1RXO3AVkJbHnSHseOx2Gm44gI5ZiciaGr/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1RXO3AVkJbHnSHseOx2Gm44gI5ZiciaGr" width="100%">
 						<p><b>Ring Of Fire Adventure Stage 2 Episode 2</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/15vrRkFkPs27EygpqLdBbOTOT5YEZdu05/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/15vrRkFkPs27EygpqLdBbOTOT5YEZdu05/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=15vrRkFkPs27EygpqLdBbOTOT5YEZdu05" width="100%">
 						<p><b>Ring Of Fire Adventure Stage 2 Episode 3</b></p>
 					</a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/17ZQi5LcETxjcF3MazDOmjAsZzy9pcPtt/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/17ZQi5LcETxjcF3MazDOmjAsZzy9pcPtt/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=17ZQi5LcETxjcF3MazDOmjAsZzy9pcPtt" width="100%">
 						<p><b>Ring Of Fire Adventure Stage 2 Episode 4</b></p>
 					</a>
@@ -192,25 +192,25 @@
 
       <div class="row">
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1PLmjOr-o-lg9bDqgAvbITiEyG4sqM7hY/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1PLmjOr-o-lg9bDqgAvbITiEyG4sqM7hY/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1PLmjOr-o-lg9bDqgAvbITiEyG4sqM7hY" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 5</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1JuJAIZcTKn7FQmlWiF-kVUto35k22hro/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1JuJAIZcTKn7FQmlWiF-kVUto35k22hro/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1JuJAIZcTKn7FQmlWiF-kVUto35k22hro" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 6</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/18IxXd-Q44Vjaf9-m5LpeBIeJ-XknEjnp/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/18IxXd-Q44Vjaf9-m5LpeBIeJ-XknEjnp/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=18IxXd-Q44Vjaf9-m5LpeBIeJ-XknEjnp" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 7</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/16uN9oh4TRrncGBVaLucSOZIL9jU1SGCW/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/16uN9oh4TRrncGBVaLucSOZIL9jU1SGCW/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=16uN9oh4TRrncGBVaLucSOZIL9jU1SGCW" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 8</b></p>
           </a>
@@ -219,25 +219,25 @@
 
       <div class="row">
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1D4AvqhoACfp7eLBF3vdIv4GrsNVmx5n-/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1D4AvqhoACfp7eLBF3vdIv4GrsNVmx5n-/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1D4AvqhoACfp7eLBF3vdIv4GrsNVmx5n-" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 9</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1CTga_NG3Qg0JmK1OR9991xmMnmv1Xett/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1CTga_NG3Qg0JmK1OR9991xmMnmv1Xett/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1CTga_NG3Qg0JmK1OR9991xmMnmv1Xett" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 10</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1wqzmbCZzTUzopktZ97gXsRBuX6mO8IY1/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1wqzmbCZzTUzopktZ97gXsRBuX6mO8IY1/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1wqzmbCZzTUzopktZ97gXsRBuX6mO8IY1" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 11</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1DMSaTxmK4FP-1c7vcYwNleGj89Je4h7S/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1DMSaTxmK4FP-1c7vcYwNleGj89Je4h7S/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1DMSaTxmK4FP-1c7vcYwNleGj89Je4h7S" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 12</b></p>
           </a>
@@ -246,19 +246,19 @@
 
       <div class="row">
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/17TVg6mphu3YTsZuxC3cDwCj7gWru7Vgh/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/17TVg6mphu3YTsZuxC3cDwCj7gWru7Vgh/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=17TVg6mphu3YTsZuxC3cDwCj7gWru7Vgh" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 13</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/12HvpHZeQatUSMuR_V9boZz_r9wpYX_wU/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/12HvpHZeQatUSMuR_V9boZz_r9wpYX_wU/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=12HvpHZeQatUSMuR_V9boZz_r9wpYX_wU" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 14</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1uXDaY3IxE-mOXmUx404EqtgM1EhZxj3s/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1uXDaY3IxE-mOXmUx404EqtgM1EhZxj3s/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1uXDaY3IxE-mOXmUx404EqtgM1EhZxj3s" width="100%">
             <p><b>Ring Of Fire Adventure Stage 2 Episode 15</b></p>
           </a>
@@ -271,25 +271,25 @@
 		<div id="tab4" class="tab-pane fade">
 			<div class="row">
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1u52PKrZDf9qt-9eaCHh0F0hiDWLIiie8/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1u52PKrZDf9qt-9eaCHh0F0hiDWLIiie8/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1u52PKrZDf9qt-9eaCHh0F0hiDWLIiie8" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 1</b></p>
           </a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1AES_XNSufUJl3RwF_7i3hsPxNPJYtmi_/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1AES_XNSufUJl3RwF_7i3hsPxNPJYtmi_/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1AES_XNSufUJl3RwF_7i3hsPxNPJYtmi_" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 2</b></p>
           </a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1il0GRSgveJs32xaHB37APN6ybDJ-6NrB/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1il0GRSgveJs32xaHB37APN6ybDJ-6NrB/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1il0GRSgveJs32xaHB37APN6ybDJ-6NrB" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 3</b></p>
           </a>
 				</div>
 				<div class="col">
-					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1aQR7e-r9tUS3-RTNIQtX_3ktBUNi54z3/preview?usp=sharing" data-target="#modalVideo">
+					<a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1aQR7e-r9tUS3-RTNIQtX_3ktBUNi54z3/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1aQR7e-r9tUS3-RTNIQtX_3ktBUNi54z3" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 4</b></p>
           </a>
@@ -298,25 +298,25 @@
 
       <div class="row">
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1_tI_kgqjNVz1FJGkNtHuHhHUZTIf7Xh5/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1_tI_kgqjNVz1FJGkNtHuHhHUZTIf7Xh5/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1_tI_kgqjNVz1FJGkNtHuHhHUZTIf7Xh5" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 5</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1JACcwCyiRMZ23yF0xLOSoamnDbOgC-fB/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1JACcwCyiRMZ23yF0xLOSoamnDbOgC-fB/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1JACcwCyiRMZ23yF0xLOSoamnDbOgC-fB" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 6</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1tS8I6Lm7sxzGBxfeia9LHCdXA4TYKfRR/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1tS8I6Lm7sxzGBxfeia9LHCdXA4TYKfRR/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1tS8I6Lm7sxzGBxfeia9LHCdXA4TYKfRR" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 7</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1I92LkeKjMW7kq7iQ_9aMbIrihcaXjTzh/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1I92LkeKjMW7kq7iQ_9aMbIrihcaXjTzh/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1I92LkeKjMW7kq7iQ_9aMbIrihcaXjTzh" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 8</b></p>
           </a>
@@ -325,25 +325,25 @@
 
       <div class="row">
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1Q4Az96UCWyjrK_Xhdsn6SVq0D4pBHeHx/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1Q4Az96UCWyjrK_Xhdsn6SVq0D4pBHeHx/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1Q4Az96UCWyjrK_Xhdsn6SVq0D4pBHeHx" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 9</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1Xw7B0zQp_V2_orJLHKWXNkkflJEboiRU/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1Xw7B0zQp_V2_orJLHKWXNkkflJEboiRU/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1Xw7B0zQp_V2_orJLHKWXNkkflJEboiRU" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 10</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1U4Us-PvGScsCI3LjmReLVkFYkQY1mSB7/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1U4Us-PvGScsCI3LjmReLVkFYkQY1mSB7/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1U4Us-PvGScsCI3LjmReLVkFYkQY1mSB7" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 11</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1GSn-flh1qn6rXzqizp2KXI19TaDg6bSm/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1GSn-flh1qn6rXzqizp2KXI19TaDg6bSm/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1GSn-flh1qn6rXzqizp2KXI19TaDg6bSm" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 12</b></p>
           </a>
@@ -352,13 +352,13 @@
 
       <div class="row">
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1YEc4O2CtaAs1ILcu2QHDXVdwoDxCPUK-/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1YEc4O2CtaAs1ILcu2QHDXVdwoDxCPUK-/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1YEc4O2CtaAs1ILcu2QHDXVdwoDxCPUK-" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 13</b></p>
           </a>
         </div>
         <div class="col">
-          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1eQ_0GbSIAFJ6LMKvbrDUYw4KGVdXvDzb/preview?usp=sharing" data-target="#modalVideo">
+          <a href="#" class="video-thumb" data-toggle="modal" data-src="https://drive.google.com/file/d/1eQ_0GbSIAFJ6LMKvbrDUYw4KGVdXvDzb/preview?authuser=0" data-target="#modalVideo">
             <img src="https://drive.google.com/thumbnail?authuser=0&sz=w360&id=1eQ_0GbSIAFJ6LMKvbrDUYw4KGVdXvDzb" width="100%">
             <p><b>Ring Of Fire Adventure Stage 3 Episode 14</b></p>
           </a>
