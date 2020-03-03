@@ -46,7 +46,7 @@ section {
 }
 
 .nav-left {
-	padding-left: 126px !important;
+	padding-left: 230px !important;
 }
 
 .nav-left .nav-item a {
@@ -397,9 +397,9 @@ section {
   }
 }
 
-@media screen and (max-width: 1280px) and (orientation: landscape) {
+@media screen and (max-width: 1366px) and (orientation: landscape) {
 	.nav-left {
-		padding-left: 86px !important;
+		padding-left: 190px !important;
 	}
 
 	.nav-left .nav-item a {

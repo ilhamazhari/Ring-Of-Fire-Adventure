@@ -50,8 +50,8 @@
 	</div>
 
 	<div class="home-title">
-		<h1>EXPLORE INDONESIA THROUGH OUR WONDERFUL JOURNEY</h1>
-		<h3>WE PRESENT INDONESIAN NATURE CULTURE & HERITAGE</h3>
+		<h1>{{ __('home.explore') }}</h1>
+		<h3>{{ __('home.present') }}</h3>
 	</div>
 </section>
 

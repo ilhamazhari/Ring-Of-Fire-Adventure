@@ -82,3 +82,7 @@ Route::group(['prefix' => 'webmanager', 'middleware' => 'auth'], function(){
   Route::resource('trip', 'TripController', ['as' => 'manager']);
   Route::resource('vendor', 'VendorController', ['as' => 'manager']);
 });
+
+// Localization
+
+Route::get('/{locale}', function($locale){ App::setLocale($locale); return view('home'); });

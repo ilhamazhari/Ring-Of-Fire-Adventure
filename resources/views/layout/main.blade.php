@@ -15,6 +15,7 @@
 		<link rel="shortcut icon" href="{{ URL::to('/') }}/images/rofa-logo.jpg">
 
 		<link rel="stylesheet" type="text/css" href="{{ URL::to('/') }}/css/style.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.6/css/flag-icon.min.css">
 		<style type="text/css">
 			@font-face{
 				font-family: "Avenir Medium";
@@ -51,6 +52,14 @@
 				src: url('https://www.rofa.id/fonts/PANTON-BLACKITALICCAPS.OTF');
 				font-display: swap;
 			}
+      .flag-icon-id { background-repeat: no-repeat; }
+      .flag-icon-gb { background-repeat: no-repeat; }
+      .nav-lang {}
+      .nav-lang:hover {
+        opacity: .5;
+        transition: .4;
+        text-decoration: none;
+      }
 		</style>
 
 		<!-- Latest compiled and minified CSS -->

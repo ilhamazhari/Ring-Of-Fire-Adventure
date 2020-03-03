@@ -50,6 +50,13 @@
           </form>
 				</div>
 			</li>
+      <li class="nav-item"><a></li>
+      <li>
+        <a class="nav-lang" href="{{url('/id')}}"><span class="flag-icon-id">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;&nbsp;</a>
+      </li>
+      <li>
+        <a class="nav-lang" href="{{url('/en')}}">&nbsp;&nbsp;<span class="flag-icon-gb">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> </a>
+      </li>
 		</ul>
 	</div>
 
