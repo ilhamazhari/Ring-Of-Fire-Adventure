@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Content;
+use Storage;
 
 class ContentController extends Controller
 {
@@ -32,10 +33,11 @@ class ContentController extends Controller
 
       if($request->hasfile('imageheading')){
         $name = $request->imageheading->getClientOriginalName();
-        $newName = date('Ymd') . '-' . $name;
-        $path = public_path('/images/content/');
+        $newName = 'images/' . date('Y').'/'.date('m') . '/' .date('Ymd') . '-' . $name;
+        //$path = public_path('/images/content/');
 
-        $request->imageheading->move($path, $newName);
+        //$request->imageheading->move($path, $newName);
+        $saveOnS3 = Storage::disk('s3')->put($newName, file_get_contents($request->file('imageheading')), 'public');
         $content->imageheading = $newName;
       }
       
@@ -99,10 +101,11 @@ class ContentController extends Controller
 
         $data = base64_decode($data);
 
-        $imageName = 'images/content/' . date('Ymd') . '-' . $name . '.jpg';
-        $path = public_path() . '/' . $imageName;
+        $newName = 'images/' . date('Y').'/'.date('m') . '/' .date('Ymd') . '-' . $name . '.jpg';
+        //$path = public_path() . '/' . $newName;
 
-        file_put_contents($path, $data);
+        //file_put_contents($path, $data);
+        $saveOnS3 = Storage::disk('s3')->put($newName, $data, 'public');
         $host = url('/');
 
         $img->removeattribute('src');

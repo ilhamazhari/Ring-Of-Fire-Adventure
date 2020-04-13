@@ -433,15 +433,100 @@
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
 
+        @auth
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay" frameborder="0" allowfullscreen></iframe>
         </div>
+        @endauth
+        @guest
+        <div class="embed-responsive embed-responsive-16by9">
+          <h3 class="align-middle">Login or Register to watch this video</h3>
+        </div>
+        @endguest
+        
       </div>
 
     </div>
   </div>
 </div>
 
+<!-- Register Modal -->
+
+<div class="modal fade" id="modalRegister" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="{{ route('member.register') }}" method="POST">
+        @csrf
+
+      <div class="modal-header">
+        <h3>Member Registration</h3>
+        <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+      </div>
+      
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="firstname" class="form-control" placeholder="First Name">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="lastname" class="form-control" placeholder="Last Name">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="text" name="email" class="form-control" placeholder="E-Mail">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="password" name="password" class="form-control" placeholder="Password">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <input type="number" name="phone" class="form-control" placeholder="Phone/Mobile">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary">Register</button>
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+      </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+<!-- Alert Modal -->
+
+@if(session('success') || session('error'))
+<div class="modal" id="modalAlert" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      @if(session('error'))
+      <div class="alert alert-danger">
+        {{ session('error') }}
+      </div>
+      @elseif(session('success'))
+      <div class="alert alert-success">
+        {{ session('success') }}
+      </div>
+      @endif
+    </div>
+  </div>
+</div>
+@endif
 
 @include('layout.footer')
 

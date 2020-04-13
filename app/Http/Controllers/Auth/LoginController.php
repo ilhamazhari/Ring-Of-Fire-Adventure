@@ -36,11 +36,18 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        $this->middleware('guest:web')->except('logout');
+        $this->middleware('guest:member')->except('logout');
+    }
+
+    public function email()
+    {
+      return 'email';
     }
 
     public function username()
     {
-        return 'username';
+      return 'username';
     }
 
     public function loginForm()
@@ -55,7 +62,7 @@ class LoginController extends Controller
         'password' => 'required',
         'credentials' => 'required',
       ]);
-      if(\Auth::attempt([
+      if(\Auth::guard('web')->attempt([
         'username' => $request['username'],
         'password' => $request['password'],
         'credentials' => $request['credentials'],
@@ -64,6 +71,20 @@ class LoginController extends Controller
       }
       
       return redirect('/login')->with('error', 'Login invalid');
+    }
+
+    public function memberLogin(Request $request)
+    {
+      $this->validate($request, [
+        'email' => 'required|email',
+        'password' => 'required|min:8'
+      ]);
+
+      if(\Auth::guard('member')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))){
+        return redirect()->intended('/')->with('success', 'Logged in successfully');
+      }
+
+      return back()->withInput($request->only('email', 'remember'))->with('error', 'Login failed');
     }
 
     public function logout()

@@ -36,7 +36,12 @@
 			<li class="nav-item dropdown">
 				<a class="dropdown-toggle" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fa fa-user"></i></a>
 				<div class="dropdown-menu dropdown-menu-right dropdown-login p-3" aria-labeledby="dropdownUser">
+          @auth
+          <strong>Hello {{ Auth::check() }}</strong>
+          @endauth
+          @guest
           <form name="" class="form-horizontal" action="{{ route('member.login') }}" method="POST">
+            @csrf
             <div class="form-group">
               <input type="text" name="email" class="form-control" id="email" placeholder="E-Mail" autocomplete="email">
             </div>
@@ -45,9 +50,10 @@
             </div>
             <div class="btn-group btn-group-login" role="group">
               <button type="submit" class="btn btn-primary col-md-6">Login</button>
-              <a href="#" class="btn btn-secondary col-md-6">Register</a>
+              <button type="button" class="btn btn-secondary col-md-6" data-toggle="modal" data-target="#modalRegister">Register</button>
             </div>
           </form>
+          @endguest
 				</div>
 			</li>
       <li class="nav-item"><a></li>

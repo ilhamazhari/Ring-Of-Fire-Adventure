@@ -8,7 +8,7 @@
 
 <div class="container">
   <h1>{{$content->title}}</h1>
-  <img src="{{url('/images/content')}}/{{$content->imageheading}}" width="100%">
+  <img src="https://rofa.s3.ap-southeast-1.amazonaws.com/{{$content->imageheading}}" width="100%">
   {!! $content->content !!}
 </div>
 

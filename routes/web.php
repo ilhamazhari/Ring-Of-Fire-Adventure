@@ -13,7 +13,6 @@
 
 Route::get('/', function () { return view('home'); })->name('home');
 Route::get('/about', function () { return view('about'); })->name('about');
-Route::post('/login', 'MemberController@login')->name('login');
 Route::get('/register', function(){ return view('registration'); })->name('registration');
 Route::post('/register', 'MemberController@register')->name('registermember');
 
@@ -59,7 +58,8 @@ Route::group(['prefix' => 'payment'], function(){
 
 //RoFA Member
 Route::group(['prefix' => 'member'], function(){
-  Route::get('/login', 'MemberController@login')->name('member.login');
+  Route::post('/login', 'Auth\LoginController@memberLogin')->name('member.login');
+  Route::post('/register', 'MemberController@register')->name('member.register');
 });
 
 // RoFA Login and Signup
