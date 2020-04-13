@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use App\Member;
 
 class MemberController extends Controller
@@ -20,20 +21,18 @@ class MemberController extends Controller
         'lastname' => 'required',
         'email' => 'required|email',
         'password' => 'required|min:8',
-        'phone' => 'required|number'
+        'phone' => 'required'
       ]);
 
       $newMember = new Member;
 
-      $newMember->first_name = $request->first_name;
-      $newMember->last_name = $request->last_name;
+      $newMember->first_name = $request->firstname;
+      $newMember->last_name = $request->lastname;
       $newMember->email = $request->email;
       $newMember->password = Hash::make($request->password);
       $newMember->phone = $request->phone;
 
-      if($newMember->save()){
-        return redirect('/')->with('success', 'Registration Success');
-      }
-      return redirect('/')->with('error', 'Registration Failed');
+      $newMember->save();
+      return back()->with('success', 'Registration Success');
     }
 }

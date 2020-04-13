@@ -80,11 +80,11 @@ class LoginController extends Controller
         'password' => 'required|min:8'
       ]);
 
-      if(\Auth::guard('member')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))){
-        return redirect()->intended('/')->with('success', 'Logged in successfully');
+      if(\Auth::guard('member')->attempt(['email' => $request['email'], 'password' => $request['password']])){
+        return back()->with('success', 'Logged in successfully');
       }
 
-      return back()->withInput($request->only('email', 'remember'))->with('error', 'Login failed');
+      return redirect('/login')->withInput($request->only('email', 'remember'))->with('error', 'Login failed');
     }
 
     public function logout()

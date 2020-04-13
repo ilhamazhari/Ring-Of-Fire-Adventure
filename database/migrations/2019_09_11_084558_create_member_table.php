@@ -21,12 +21,12 @@ class CreateMemberTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('phone');
-            $table->text('addres');
-            $table->text('billing_info');
-            $table->text('shipping_info');
-            $table->text('bike_info');
-            $table->text('emergency_contact');
-            $table->text('medical_history');
+            $table->text('addres')->nullable();
+            $table->text('billing_info')->nullable();
+            $table->text('shipping_info')->nullable();
+            $table->text('bike_info')->nullable();
+            $table->text('emergency_contact')->nullable();
+            $table->text('medical_history')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
