@@ -433,12 +433,12 @@
       <div class="modal-body">
         <button type="button" class="close" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
 
-        @auth
+        @auth('member')
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay" frameborder="0" allowfullscreen></iframe>
         </div>
         @endauth
-        @guest
+        @guest('member')
         <div class="embed-responsive embed-responsive-16by9">
           <h3 class="align-middle">Login or Register to watch this video</h3>
         </div>

@@ -36,10 +36,11 @@
 			<li class="nav-item dropdown">
 				<a class="dropdown-toggle" id="dropdownUser" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#"><i class="fa fa-user"></i></a>
 				<div class="dropdown-menu dropdown-menu-right dropdown-login p-3" aria-labeledby="dropdownUser">
-          @auth
-          <strong>Hello {{ Auth::check() }}</strong>
+          @auth('member')
+            <strong class="dropdown-item">Hello {{ Auth::guard('member')->user()->first_name }}</strong>
+            <a class="dropdown-item" href="{{ route('logout') }}">Logout</a>
           @endauth
-          @guest
+          @guest('member')
           <form name="" class="form-horizontal" action="{{ route('member.login') }}" method="POST">
             @csrf
             <div class="form-group">
