@@ -72,15 +72,15 @@ Route::get('logout', 'Auth\LoginController@logout')->name('logout');
 // RoFA Web Manager
 Route::group(['prefix' => 'webmanager', 'middleware' => 'auth'], function(){
 	Route::get('/', function(){ return view('webmanager.dashboard'); })->name('manager.dashboard');
-  Route::resource('content', 'ContentController', ['as' => 'manager']);
+	Route::resource('content', 'ContentController', ['as' => 'manager']);
 	Route::resource('products', 'ProductsController', ['as' => 'manager']);
 	Route::resource('products/image', 'ProductImageController', ['as' => 'manager.products']);
 	Route::resource('events', 'EventsController', ['as' => 'manager']);
-  Route::resource('transaction', 'TransactionController', ['as' => 'manager']);
-  Route::post('transaction/submitresi', 'TransactionController@submitResi')->name('manager.transaction.submitresi');
-  Route::resource('bike', 'BikeController', ['as' => 'manager']);
-  Route::resource('trip', 'TripController', ['as' => 'manager']);
-  Route::resource('vendor', 'VendorController', ['as' => 'manager']);
+	Route::resource('transaction', 'TransactionController', ['as' => 'manager']);
+	Route::post('transaction/submitresi', 'TransactionController@submitResi')->name('manager.transaction.submitresi');
+	Route::resource('bike', 'BikeController', ['as' => 'manager']);
+	Route::resource('trip', 'TripController', ['as' => 'manager']);
+	Route::resource('vendor', 'VendorController', ['as' => 'manager']);
 });
 
 // Localization

@@ -20,6 +20,11 @@ class ContentController extends Controller
       return redirect()->back();
     }
 
+    public function create()
+    {
+      return view('webmanager.create_content');
+    }
+
     public function store(Request $request)
     {
       $request->validate([
@@ -101,15 +106,15 @@ class ContentController extends Controller
 
         $data = base64_decode($data);
 
-        $newName = 'images/' . date('Y').'/'.date('m') . '/' .date('Ymd') . '-' . $name . '.jpg';
-        //$path = public_path() . '/' . $newName;
+        $newName = 'images/' . date('Y').'/'.date('m') . '/' .date('Ymd') . '-' . $name;
+        $path = storage_path() . '/' . $newName;
 
-        //file_put_contents($path, $data);
+        //$tempFile = Storage::disk('public')->put($newName, $data);
         $saveOnS3 = Storage::disk('s3')->put($newName, $data, 'public');
-        $host = url('/');
+        $host = env('DO_CDN');
 
         $img->removeattribute('src');
-        $img->setattribute('src', $host . '/' . $imageName);
+        $img->setattribute('src', $host . '/' . $newName);
       }
 
       $detail = $dom->savehtml();

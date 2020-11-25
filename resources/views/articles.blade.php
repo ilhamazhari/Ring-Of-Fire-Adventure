@@ -19,7 +19,7 @@
     @endphp
     <div class="col-md-4">
       <a href="{{ route('news.details', $linknews) }}">
-        <img src="{{ url('/images/content') }}/{{ $nw->imageheading }}" width="100%">
+        <img src="{{ env('DO_CDN') . '/' . $nw->imageheading }}" width="100%">
         <h3>{{$nw->title}}</h3>
       </a>
     </div>
@@ -45,7 +45,7 @@
     @endphp
     <div class="col-md-4">
       <a href="{{ route('articles.details', $linkarticles) }}">
-        <img src="{{url('/images/content')}}/{{$at->imageheading}}" width="100%">
+        <img src="{{ env('DO_CDN') . '/' . $at->imageheading}}" width="100%">
         <h3>{{$at->title}}</h3>
       </a>
     </div>
